@@ -35,13 +35,13 @@ console.log(publicDirectory);
 
 // Define routes
 app.get('/', (_req, res) => {
-  res.send({
-    isDevelopment: String(process.env.NODE_ENV) === 'development',
-    publicDirectory,
-    __dirname,
-  });
+  // res.send({
+  //   isDevelopment: String(process.env.NODE_ENV) === 'development',
+  //   publicDirectory,
+  //   __dirname,
+  // });
 
-  // res.sendFile('/var/task/dist/public/index.html');
+  res.sendFile('/var/task/dist/index.html');
 });
 
 app.get('/api/hello', (_req: Request, res: Response) => {
