@@ -12,19 +12,27 @@ const platform: string = process.platform;
 
 const isVercel = process.env.VERCEL === '1';
 
-let __dirname = path.dirname(decodeURI(new URL(import.meta.url).pathname));
-if (platform === 'win32' && __dirname.startsWith('/')) {
-  __dirname = __dirname.substring(1);
+let projectRoot: string;
+
+if (isVercel) {
+  projectRoot = process.cwd();
+} else {
+  let __dirname = path.dirname(decodeURI(new URL(import.meta.url).pathname));
+  if (platform === 'win32') {
+    __dirname = __dirname.substring(1);
+  }
+  projectRoot = path.join(__dirname, '..');
 }
 
-const staticDirectory = __dirname;
+const distDirectory = path.join(projectRoot, 'dist');
 
 app.use(express.json());
 app.use(cors());
-app.use(express.static(staticDirectory));
+app.use(express.static(distDirectory));
 
+// index route (serves your built React app)
 app.get('/', (_req: Request, res: Response) => {
-  res.sendFile(path.join(staticDirectory, 'index.html'));
+  res.sendFile(path.join(distDirectory, 'index.html'));
 });
 
 app.get('/api', (_req: Request, res: Response) => {
@@ -35,7 +43,7 @@ if (!isVercel) {
   app.listen(PORT, () => {
     // eslint-disable-next-line no-console
     console.log(
-      `${platform.charAt(0).toUpperCase() + platform.slice(1)} is running on http://127.0.0.1:${PORT}`
+      `${platform.charAt(0).toUpperCase() + platform.slice(1)} is running on http://127.0.0.1:${PORT}`,
     );
   });
 }
