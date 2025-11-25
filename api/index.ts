@@ -39,7 +39,8 @@ app.get('/', (_req, res) => {
     return;
   }
 
-  res.sendFile(path.join(publicDirectory, 'index.html'));
+  // res.sendFile(path.join(publicDirectory, 'index.html'));
+  res.sendFile("/var/task/dist/public/index.html");
 });
 
 app.get('/api', (_req: Request, res: Response) => {
