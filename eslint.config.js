@@ -30,6 +30,7 @@ export default [
       '**/vitest.config.ts',
       '**/tailwind.config.js',
       '**/postcss.config.js',
+      '**/api'
     ],
   },
   ...fixupConfigRules(
