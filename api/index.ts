@@ -13,39 +13,26 @@ const platform: string = process.platform;
 const isVercel = process.env.VERCEL === '1';
 let publicDirectory: string;
 
-let __dirname = path.dirname(decodeURI(new URL(import.meta.url).pathname));
 if (isVercel) {
-  publicDirectory = path.join(process.cwd(), 'dist');
+  publicDirectory = path.join(process.cwd(), 'public');
 } else {
+  let __dirname = path.dirname(decodeURI(new URL(import.meta.url).pathname));
   if (platform === 'win32') {
     __dirname = __dirname.substring(1);
   }
-  publicDirectory = path.join(__dirname);
+  publicDirectory = path.join(__dirname, '..', 'public');
 }
 
-// Parse JSON from front end
 app.use(express.json());
-
-// Enable CORS and serve static files
 app.use(cors());
 app.use(express.static(publicDirectory));
 
-console.log(__dirname);
-console.log(publicDirectory);
-
-// Define routes
-app.get('/', (_req, res) => {
-  // res.send({
-  //   isDevelopment: String(process.env.NODE_ENV) === 'development',
-  //   publicDirectory,
-  //   __dirname,
-  // });
-
-  res.sendFile('/var/task/dist/index.html');
-});
-
 app.get('/api/hello', (_req: Request, res: Response) => {
   res.send({ message: 'Hello, world!' });
+});
+
+app.get('*', (_req, res) => {
+  res.sendFile(path.join(publicDirectory, 'index.html'));
 });
 
 if (process.env.VERCEL !== '1') {
