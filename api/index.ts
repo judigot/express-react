@@ -55,19 +55,21 @@ app.get('/api/files', (_req: Request, res: Response) => {
 });
 
 app.get('/api/dist', (_req: Request, res: Response) => {
-  const currentPath = __dirname;
+  const distPath = path.join(__dirname, '..', 'dist');
 
   let files: string[] = [];
+  let error: string | null = null;
 
   try {
-    files = fs.readdirSync(currentPath);
+    files = fs.readdirSync(distPath);
   } catch (err) {
-    files = [`Error reading directory: ${(err as Error).message}`];
+    error = (err as Error).message;
   }
 
   res.send({
-    cwd: currentPath,
+    distPath,
     files,
+    error,
   });
 });
 
