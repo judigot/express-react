@@ -14,10 +14,11 @@ const isVercel = process.env.VERCEL === '1';
 
 let projectRoot: string;
 
+let __dirname = path.dirname(decodeURI(new URL(import.meta.url).pathname));
 if (isVercel) {
   projectRoot = process.cwd();
 } else {
-  let __dirname = path.dirname(decodeURI(new URL(import.meta.url).pathname));
+  __dirname = path.dirname(decodeURI(new URL(import.meta.url).pathname));
   if (platform === 'win32') {
     __dirname = __dirname.substring(1);
   }
