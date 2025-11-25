@@ -31,10 +31,6 @@ app.get('/api/hello', (_req: Request, res: Response) => {
   res.send({ message: 'Hello, world!' });
 });
 
-app.get('*', (_req, res) => {
-  res.sendFile(path.join(publicDirectory, 'index.html'));
-});
-
 if (process.env.VERCEL !== '1') {
   app.listen(PORT, () => {
     // eslint-disable-next-line no-console
