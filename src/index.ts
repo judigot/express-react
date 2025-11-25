@@ -43,11 +43,11 @@ app.get('/', (_req, res) => {
 });
 
 app.get('/api', (_req: Request, res: Response) => {
-  res.json({ message: path.join(publicDirectory, 'index.html') });
+  res.send({ message: path.join(publicDirectory, 'index.html') });
 });
 
 app.get('/api/hello', (_req: Request, res: Response) => {
-  res.json({ message: 'Hello, world!' });
+  res.send({ message: 'Hello, world!' });
 });
 
 app.get('*', (_req, res) => {
