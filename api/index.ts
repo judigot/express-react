@@ -30,9 +30,8 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static(distDirectory));
 
-// index route (serves your built React app)
-app.get('/', (_req: Request, res: Response) => {
-  res.sendFile(path.join(distDirectory, 'index.html'));
+app.get('*', (_req: Request, res: Response) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
 app.get('/api', (_req: Request, res: Response) => {
