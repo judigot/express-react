@@ -30,6 +30,9 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static(publicDirectory));
 
+console.log(__dirname);
+console.log(publicDirectory);
+
 // Define routes
 app.get('/', (_req, res) => {
   const isDevelopment: boolean = String(process.env.NODE_ENV) === 'development';
