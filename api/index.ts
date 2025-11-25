@@ -35,7 +35,7 @@ app.get('/', (_req: Request, res: Response) => {
   res.sendFile(path.join(distDirectory, 'index.html'));
 });
 
-app.get('/api/hello', (_req: Request, res: Response) => {
+app.get('/api', (_req: Request, res: Response) => {
   res.send({ message: 'Hello, world!' });
 });
 
