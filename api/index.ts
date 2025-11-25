@@ -31,16 +31,16 @@ app.use(cors());
 app.use(express.static(publicDirectory));
 
 // Define routes
-// app.get('/', (_req, res) => {
-//   const isDevelopment: boolean = String(process.env.NODE_ENV) === 'development';
+app.get('/', (_req, res) => {
+  const isDevelopment: boolean = String(process.env.NODE_ENV) === 'development';
 
-//   if (isDevelopment) {
-//     res.redirect(String(process.env.VITE_FRONTEND_URL));
-//     return;
-//   }
+  if (isDevelopment) {
+    res.redirect(String(process.env.VITE_FRONTEND_URL));
+    return;
+  }
 
-//   res.sendFile(path.join(publicDirectory, 'index.html'));
-// });
+  res.sendFile(path.join(publicDirectory, 'index.html'));
+});
 
 app.get('/api', (_req: Request, res: Response) => {
   res.send({ message: path.join(publicDirectory, 'index.html') });
@@ -50,9 +50,9 @@ app.get('/api/hello', (_req: Request, res: Response) => {
   res.send({ message: 'Hello, world!' });
 });
 
-app.get('*', (_req, res) => {
-  res.sendFile(path.join(publicDirectory, 'index.html'));
-});
+// app.get('*', (_req, res) => {
+//   res.sendFile(path.join(publicDirectory, 'index.html'));
+// });
 
 if (process.env.VERCEL !== '1') {
   app.listen(PORT, () => {
