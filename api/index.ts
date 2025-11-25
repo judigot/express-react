@@ -30,12 +30,26 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static(distDirectory));
 
-// app.get('*', (_req: Request, res: Response) => {
-//   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-// });
-
 app.get('/api', (_req: Request, res: Response) => {
   res.send({ message: 'Hello, world!' });
+});
+
+import fs from 'node:fs';
+app.get('/api', (_req: Request, res: Response) => {
+  const currentPath = __dirname;
+
+  let files: string[] = [];
+
+  try {
+    files = fs.readdirSync(currentPath);
+  } catch (err) {
+    files = [`Error reading directory: ${(err as Error).message}`];
+  }
+
+  res.send({
+    cwd: currentPath,
+    files,
+  });
 });
 
 if (!isVercel) {
