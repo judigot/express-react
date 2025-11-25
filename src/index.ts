@@ -9,13 +9,19 @@ dotenv.config();
 const app = express();
 const PORT = (process.env.PORT ?? 5000).toString();
 const platform: string = process.platform;
-let __dirname = path.dirname(decodeURI(new URL(import.meta.url).pathname));
 
-if (platform === 'win32') {
-  __dirname = __dirname.substring(1);
+const isVercel = process.env.VERCEL === '1';
+let publicDirectory: string;
+
+if (isVercel) {
+  publicDirectory = path.join(process.cwd(), 'dist', 'public');
+} else {
+  let __dirname = path.dirname(decodeURI(new URL(import.meta.url).pathname));
+  if (platform === 'win32') {
+    __dirname = __dirname.substring(1);
+  }
+  publicDirectory = path.join(__dirname, 'public');
 }
-
-const publicDirectory = path.join(__dirname, 'public');
 
 // Parse JSON from front end
 app.use(express.json());
@@ -33,7 +39,7 @@ app.get('/', (_req, res) => {
     return;
   }
 
-  res.sendFile(publicDirectory);
+  res.sendFile(path.join(publicDirectory, 'index.html'));
 });
 
 app.get('/api', (_req: Request, res: Response) => {
@@ -43,12 +49,18 @@ app.get('/api', (_req: Request, res: Response) => {
 app.get('/api/hello', (_req: Request, res: Response) => {
   res.json({ message: 'Hello, world!' });
 });
-// Start server
-app.listen(PORT, () => {
-  // eslint-disable-next-line no-console
-  console.log(
-    `${platform.charAt(0).toUpperCase() + platform.slice(1)} is running on http://127.0.0.1:${PORT}`,
-  );
+
+app.get('*', (_req, res) => {
+  res.sendFile(path.join(publicDirectory, 'index.html'));
 });
+
+if (process.env.VERCEL !== '1') {
+  app.listen(PORT, () => {
+    // eslint-disable-next-line no-console
+    console.log(
+      `${platform.charAt(0).toUpperCase() + platform.slice(1)} is running on http://127.0.0.1:${PORT}`,
+    );
+  });
+}
 
 export default app;
