@@ -14,13 +14,13 @@ const isVercel = process.env.VERCEL === '1';
 let publicDirectory: string;
 
 if (isVercel) {
-  publicDirectory = path.join(process.cwd(), 'dist', 'public');
+  publicDirectory = path.join(process.cwd(), 'dist');
 } else {
   let __dirname = path.dirname(decodeURI(new URL(import.meta.url).pathname));
   if (platform === 'win32') {
     __dirname = __dirname.substring(1);
   }
-  publicDirectory = path.join(__dirname, 'public');
+  publicDirectory = path.join(__dirname);
 }
 
 // Parse JSON from front end
