@@ -36,7 +36,25 @@ app.get('/api', (_req: Request, res: Response) => {
 });
 
 import fs from 'node:fs';
+
 app.get('/api/files', (_req: Request, res: Response) => {
+  const currentPath = __dirname;
+
+  let files: string[] = [];
+
+  try {
+    files = fs.readdirSync(currentPath);
+  } catch (err) {
+    files = [`Error reading directory: ${(err as Error).message}`];
+  }
+
+  res.send({
+    cwd: currentPath,
+    files,
+  });
+});
+
+app.get('/api/dist', (_req: Request, res: Response) => {
   const currentPath = __dirname;
 
   let files: string[] = [];
