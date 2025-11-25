@@ -11,27 +11,44 @@ const PORT = (process.env.PORT ?? 5000).toString();
 const platform: string = process.platform;
 
 const isVercel = process.env.VERCEL === '1';
-let publicDirectory: string;
+
+// Resolve project root and dist directory
+let projectRoot: string;
 
 if (isVercel) {
-  publicDirectory = path.join(process.cwd(), 'public');
+  // On Vercel, process.cwd() is the project root
+  projectRoot = process.cwd();
 } else {
   let __dirname = path.dirname(decodeURI(new URL(import.meta.url).pathname));
   if (platform === 'win32') {
+    // Remove leading slash on Windows (e.g. /C:/path -> C:/path)
     __dirname = __dirname.substring(1);
   }
-  publicDirectory = path.join(__dirname, '..', 'public');
+  // Your folder structure: api / public / src / dist
+  // api/index.ts sits inside "api", so project root is one level up
+  projectRoot = path.join(__dirname, '..');
 }
+
+const distDirectory = path.join(projectRoot, 'dist');
 
 app.use(express.json());
 app.use(cors());
-app.use(express.static(publicDirectory));
 
+// Serve the built Vite React app (static assets from dist)
+app.use(express.static(distDirectory));
+
+// Example API route
 app.get('/api/hello', (_req: Request, res: Response) => {
   res.send({ message: 'Hello, world!' });
 });
 
-if (process.env.VERCEL !== '1') {
+// SPA fallback: any non-API route returns index.html
+app.get('*', (_req: Request, res: Response) => {
+  res.sendFile(path.join(distDirectory, 'index.html'));
+});
+
+// Only listen locally; on Vercel the handler is exported instead
+if (!isVercel) {
   app.listen(PORT, () => {
     // eslint-disable-next-line no-console
     console.log(
