@@ -7,20 +7,20 @@ import {
 import {
   extractDBConnectionInfo,
   type IDBConnectionInfo,
-} from '@/utils/extractDBConnectionInfo.ts';
-import type { DBTypes, IJSONSchema } from '@/interfaces/interfaces.ts';
-import { SQLQueries } from '@/utils/mappings.ts';
-import { CREATION_MODES } from '@/constants.ts';
-import { oneToOne, oneToMany, manyToMany } from '@/schema-infos/index.ts';
+} from '@/utils/extractDBConnectionInfo';
+import type { DBTypes, IJSONSchema } from '@/interfaces/interfaces';
+import { SQLQueries } from '@/utils/mappings';
+import { CREATION_MODES } from '@/constants';
+import { oneToOne, oneToMany, manyToMany } from '@/schema-infos/';
 import {
   usersPostOneToOneSchema,
   usersPostsOneToManySchema,
   POSSchema,
   masterJSONSchema,
-} from '@/json-schemas/index.ts';
-import { useTransformationsStore } from '@/useTransformationsStore.ts';
-import { createTabSync } from '@/utils/createTabSync.ts';
-import masterSchema from '@/schema-infos/masterSchema.ts';
+} from '@/json-schemas/';
+import { useTransformationsStore } from '@/useTransformationsStore';
+import { createTabSync } from '@/utils/createTabSync';
+import masterSchema from '@/schema-infos/masterSchema';
 
 export const frameworks = {
   LARAVEL: 'Laravel',

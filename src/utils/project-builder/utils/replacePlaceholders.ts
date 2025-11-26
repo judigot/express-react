@@ -1,12 +1,12 @@
-import type { IStructure } from '@/components/FileViewer.tsx';
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import type { ISchemaInfoResult } from '@/utils/getSchemaInfo.ts';
-import { processCommand } from '@/utils/project-builder/template-processors/processCommand.ts';
-import { processIfConditions } from '@/utils/project-builder/template-processors/processIfConditions.ts';
-import { importTemplateAsPlaceholder } from '@/utils/project-builder/template-processors/importTemplateAsPlaceholder.ts';
-import type { Replacements } from '@/utils/project-builder/interfaces/interfaces.ts';
-import { processDynamicProperties } from '@/utils/project-builder/utils/processDynamicProperties.ts';
-import type { IFormStore } from '@/useFormStore.ts';
+import type { IStructure } from '@/components/FileViewer';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import type { ISchemaInfoResult } from '@/utils/getSchemaInfo';
+import { processCommand } from '@/utils/project-builder/template-processors/processCommand';
+import { processIfConditions } from '@/utils/project-builder/template-processors/processIfConditions';
+import { importTemplateAsPlaceholder } from '@/utils/project-builder/template-processors/importTemplateAsPlaceholder';
+import type { Replacements } from '@/utils/project-builder/interfaces/interfaces';
+import { processDynamicProperties } from '@/utils/project-builder/utils/processDynamicProperties';
+import type { IFormStore } from '@/useFormStore';
 
 /**
  * Replaces placeholders in a template with values from the replacements object

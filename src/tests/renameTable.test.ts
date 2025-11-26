@@ -1,9 +1,9 @@
 import { describe, expect, test } from 'vitest';
-import renameTable from '@/utils/renameTable.ts';
-import manyToManySchema from '@/schema-infos/manyToMany.ts';
-import oneToOneSchema from '@/schema-infos/oneToOne.ts';
-import oneToManySchema from '@/schema-infos/oneToMany.ts';
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
+import renameTable from '@/utils/renameTable';
+import manyToManySchema from '@/schema-infos/manyToMany';
+import oneToOneSchema from '@/schema-infos/oneToOne';
+import oneToManySchema from '@/schema-infos/oneToMany';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
 
 describe('renameTable', () => {
   test('should rename order table to orderz and update all related references', () => {

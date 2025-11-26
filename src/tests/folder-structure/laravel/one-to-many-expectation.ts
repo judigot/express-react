@@ -1,4 +1,4 @@
-import type { IStructure } from '@/components/FileViewer.tsx';
+import type { IStructure } from '@/components/FileViewer';
 
 export const oneToManyExpectation = [
   {

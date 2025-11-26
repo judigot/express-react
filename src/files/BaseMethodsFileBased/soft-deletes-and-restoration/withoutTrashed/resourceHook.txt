@@ -1,6 +1,6 @@
 import { useQuery, type UseQueryOptions } from '@tanstack/react-query';
-import { getWithoutTrashedResources } from '@/hooks/shared/useWithoutTrashed.ts';
-import { type I{{tableNamePascalCaseSingular}} } from '@/interfaces/I{{tableNamePascalCaseSingular}}.ts';
+import { getWithoutTrashedResources } from '@/hooks/shared/useWithoutTrashed';
+import { type I{{tableNamePascalCaseSingular}} } from '@/interfaces/I{{tableNamePascalCaseSingular}}';
 
 interface IWithoutTrashedParams {
   filters?: Record<string, unknown>;

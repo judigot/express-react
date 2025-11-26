@@ -1,7 +1,7 @@
 import { Router, type Request, type Response } from 'express';
-import { createLocalFilesService } from '@/services/createLocalFilesService.ts';
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import type { IFormStore } from '@/useFormStore.ts';
+import { createLocalFilesService } from '@/services/createLocalFilesService';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import type { IFormStore } from '@/useFormStore';
 
 const router = Router();
 

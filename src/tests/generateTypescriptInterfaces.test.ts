@@ -1,13 +1,13 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import generateTypescriptInterfaces from '@/utils/generateTypescriptInterfaces.ts';
-import { normalizeWhitespace } from '@/helpers/stringHelper.ts';
-import manyToMany from '@/schema-infos/manyToMany.ts';
-import oneToMany from '@/schema-infos/oneToMany.ts';
-import oneToOne from '@/schema-infos/oneToOne.ts';
+import generateTypescriptInterfaces from '@/utils/generateTypescriptInterfaces';
+import { normalizeWhitespace } from '@/helpers/stringHelper';
+import manyToMany from '@/schema-infos/manyToMany';
+import oneToMany from '@/schema-infos/oneToMany';
+import oneToOne from '@/schema-infos/oneToOne';
 import {
   setupTypeMappings,
   teardownTypeMappings,
-} from '@/tests/helpers/setupTypeMappings.ts';
+} from '@/tests/helpers/setupTypeMappings';
 
 describe('generateTypescriptInterfaces', () => {
   const userPostOneToOneSchemaInfo = oneToOne;

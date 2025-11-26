@@ -1,6 +1,6 @@
-import type { IFile } from '@/components/FileViewer.tsx';
-import { createFile } from '@/helpers/stringHelper.ts';
-import { useFormStore } from '@/useFormStore.ts';
+import type { IFile } from '@/components/FileViewer';
+import { createFile } from '@/helpers/stringHelper';
+import { useFormStore } from '@/useFormStore';
 
 const createBaseController = (): IFile => {
   const backendUrl = useFormStore.getState().backendUrl;

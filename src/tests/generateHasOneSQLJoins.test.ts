@@ -1,7 +1,7 @@
-import generateHasOneSQLJoins from '@/utils/generateSQLHasOneJoins.ts';
+import generateHasOneSQLJoins from '@/utils/generateSQLHasOneJoins';
 import { describe, it, expect } from 'vitest';
-import { normalizeWhitespace } from '@/helpers/stringHelper.ts';
-import oneToOne from '@/schema-infos/oneToOne.ts';
+import { normalizeWhitespace } from '@/helpers/stringHelper';
+import oneToOne from '@/schema-infos/oneToOne';
 
 describe('generateHasOneSQLJoins', () => {
   const userPostOneToOneSchemaInfo = oneToOne;

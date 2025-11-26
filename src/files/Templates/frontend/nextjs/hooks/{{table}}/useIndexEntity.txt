@@ -1,5 +1,5 @@
 import { useQueryInstance } from '@/vendor/useQueryInstance';
-import { useResource } from '@/hooks/shared/useResource.ts';
+import { useResource } from '@/hooks/shared/useResource';
 import { type I{{tableNamePascalCaseSingular}} } from '@/interfaces/I{{tableNamePascalCaseSingular}}';
 
 export const use{{tableNamePascalCaseSingular}} = (

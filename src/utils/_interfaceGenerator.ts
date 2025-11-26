@@ -1,5 +1,5 @@
-import identifyTSPrimitiveType from '@/utils/identifyTSPrimitiveType.ts';
-import { useMockDatabaseStore } from '@/useMockDatabaseStore.ts';
+import identifyTSPrimitiveType from '@/utils/identifyTSPrimitiveType';
+import { useMockDatabaseStore } from '@/useMockDatabaseStore';
 /**
  * Summarizes the value types of keys in an array of objects.
  *

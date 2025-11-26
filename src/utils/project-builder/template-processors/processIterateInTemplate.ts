@@ -1,9 +1,9 @@
-import type { IStructure } from '@/components/FileViewer.tsx';
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import type { ISchemaInfoResult } from '@/utils/getSchemaInfo.ts';
-import { TEMPLATE_ACTIONS } from '@/utils/project-builder/constants/templateActions.ts';
-import { processIterateCommand } from '@/utils/project-builder/template-processors/processIterateCommand.ts';
-import type { IFormStore } from '@/useFormStore.ts';
+import type { IStructure } from '@/components/FileViewer';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import type { ISchemaInfoResult } from '@/utils/getSchemaInfo';
+import { TEMPLATE_ACTIONS } from '@/utils/project-builder/constants/templateActions';
+import { processIterateCommand } from '@/utils/project-builder/template-processors/processIterateCommand';
+import type { IFormStore } from '@/useFormStore';
 
 export const processIterateInTemplate = (
   content: string,

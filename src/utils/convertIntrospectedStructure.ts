@@ -3,9 +3,9 @@ import {
   type ISchemaInfo,
   isITable,
   type IIntrospectedSchemaInfo,
-} from '@/interfaces/interfaces.ts';
-import { addSchemaInfo } from '@/utils/identifySchema.ts';
-import { useMockDatabaseStore } from '@/useMockDatabaseStore.ts';
+} from '@/interfaces/interfaces';
+import { addSchemaInfo } from '@/utils/identifySchema';
+import { useMockDatabaseStore } from '@/useMockDatabaseStore';
 
 const isRecord = (value: unknown): value is Record<string, unknown> => {
   return value !== null && typeof value === 'object' && !Array.isArray(value);

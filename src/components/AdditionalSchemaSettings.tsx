@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import TagInput from '@/components/TagInput.tsx';
-import { useAdditionalSchemaStore } from '@/useAdditionalSchhemaSettings.ts';
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import useTransformationsStore from '@/useTransformationsStore.ts';
+import TagInput from '@/components/TagInput';
+import { useAdditionalSchemaStore } from '@/useAdditionalSchhemaSettings';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import useTransformationsStore from '@/useTransformationsStore';
 
 function AdditionalSchemaSettings() {
   const {

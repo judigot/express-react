@@ -70,8 +70,7 @@ export async function getUserMetadata(
 ): Promise<Record<string, unknown> | null> {
   try {
     const client = getManagementClient();
-    const response = await client.users.get({ id: auth0UserId });
-    const user = response.data;
+    const user = await client.users.get(auth0UserId);
     if (isUserWithMetadata(user)) {
       const metadata = user.user_metadata;
       if (typeof metadata === 'object') {
@@ -93,7 +92,7 @@ export async function updateUserMetadata(
 ): Promise<void> {
   try {
     const client = getManagementClient();
-    await client.users.update({ id: auth0UserId }, { user_metadata: metadata });
+    await client.users.update(auth0UserId, { user_metadata: metadata });
   } catch (error: unknown) {
     if (error instanceof Error) {
       throw new Error(`Failed to update user metadata: ${error.message}`);

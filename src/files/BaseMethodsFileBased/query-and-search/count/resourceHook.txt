@@ -1,5 +1,5 @@
 import { useQuery, type UseQueryOptions } from '@tanstack/react-query';
-import { countResources } from '@/hooks/shared/useCount.ts';
+import { countResources } from '@/hooks/shared/useCount';
 
 interface ICountParams {
   filters?: Record<string, unknown>;

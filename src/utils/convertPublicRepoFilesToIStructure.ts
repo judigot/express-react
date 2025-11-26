@@ -1,5 +1,5 @@
-import type { IStructure, IFolder } from '@/components/FileViewer.tsx';
-import type { IExtractedFile } from '@/utils/downloadPublicRepoFiles.ts';
+import type { IStructure, IFolder } from '@/components/FileViewer';
+import type { IExtractedFile } from '@/utils/downloadPublicRepoFiles';
 
 export function convertPublicRepoFilesToStructure(
   files: IExtractedFile[],

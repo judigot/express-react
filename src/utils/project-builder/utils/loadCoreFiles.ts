@@ -1,6 +1,6 @@
-import type { IStructure, IFolder, IFile } from '@/components/FileViewer.tsx';
+import type { IStructure, IFolder, IFile } from '@/components/FileViewer';
 import { parse } from 'yaml';
-import { mergeCoreFilesWithScaffolded } from './mergeCoreFiles.ts';
+import { mergeCoreFilesWithScaffolded } from './mergeCoreFiles';
 
 const findProjectFolder = (
   projectYamlPath: string,

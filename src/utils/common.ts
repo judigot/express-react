@@ -1,14 +1,14 @@
-import { replacePlaceholder } from '@/helpers/stringHelper.ts';
+import { replacePlaceholder } from '@/helpers/stringHelper';
 import type {
   DBTypes,
   IColumnInfo,
   ISchemaInfo,
   IJSONSchema,
-} from '@/interfaces/interfaces.ts';
-import type { TableCaseFormatsObject } from '@/interfaces/placeholders.ts';
-import { useFormStore } from '@/useFormStore.ts';
-import { extractDBConnectionInfo } from '@/utils/extractDBConnectionInfo.ts';
-import { useMockDatabaseStore } from '@/useMockDatabaseStore.ts';
+} from '@/interfaces/interfaces';
+import type { TableCaseFormatsObject } from '@/interfaces/placeholders';
+import { useFormStore } from '@/useFormStore';
+import { extractDBConnectionInfo } from '@/utils/extractDBConnectionInfo';
+import { useMockDatabaseStore } from '@/useMockDatabaseStore';
 import pluralize from 'pluralize';
 
 const getTypeMappings = (): Record<PropertyKey, unknown> => {

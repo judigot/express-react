@@ -1,6 +1,6 @@
-import type { IFile, IStructure, IFolder } from '@/components/FileViewer.tsx';
+import type { IFile, IStructure, IFolder } from '@/components/FileViewer';
 import { create } from 'zustand';
-import { useProjectStore } from '@/useProjectStore.ts';
+import { useProjectStore } from '@/useProjectStore';
 import equal from 'fast-deep-equal';
 import yaml from 'yaml';
 

@@ -1,18 +1,18 @@
-import type { IStructure, IFolder, IFile } from '@/components/FileViewer.tsx';
-import { formatFileContent } from '@/utils/project-builder/helpers/formatFileContent.ts';
-import { loadTemplateContent } from '@/utils/project-builder/utils/loadTemplateContent.ts';
-import { findFolderByPath } from '@/utils/project-builder/utils/folderUtils.ts';
-import { findFoldersWithWildcard } from '@/utils/project-builder/template-processors/processRecursiveWildcard.ts';
+import type { IStructure, IFolder, IFile } from '@/components/FileViewer';
+import { formatFileContent } from '@/utils/project-builder/helpers/formatFileContent';
+import { loadTemplateContent } from '@/utils/project-builder/utils/loadTemplateContent';
+import { findFolderByPath } from '@/utils/project-builder/utils/folderUtils';
+import { findFoldersWithWildcard } from '@/utils/project-builder/template-processors/processRecursiveWildcard';
 import {
   RECURSIVE_WILDCARD_REGEX,
   FOLDER_PATH_REGEX,
-} from '@/utils/project-builder/constants/templateActions.ts';
-import { ACTION_FLAGS } from '@/utils/project-builder/constants/actionFlags.ts';
-import { changeCase } from '@/utils/common.ts';
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import type { ISchemaInfoResult } from '@/utils/getSchemaInfo.ts';
-import { getReplacementsForTable } from '@/utils/project-builder/template-processors/getReplacementsForTable.ts';
-import { parseCommand } from '@/utils/project-builder/utils/parseCommand.ts';
+} from '@/utils/project-builder/constants/templateActions';
+import { ACTION_FLAGS } from '@/utils/project-builder/constants/actionFlags';
+import { changeCase } from '@/utils/common';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import type { ISchemaInfoResult } from '@/utils/getSchemaInfo';
+import { getReplacementsForTable } from '@/utils/project-builder/template-processors/getReplacementsForTable';
+import { parseCommand } from '@/utils/project-builder/utils/parseCommand';
 
 interface ICreateBaseMethodFileOptions {
   template: string;

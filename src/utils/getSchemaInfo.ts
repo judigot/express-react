@@ -1,5 +1,5 @@
-import type { ISchemaInfo, IColumnInfo } from '@/interfaces/interfaces.ts';
-import { hiddenFields } from '@/frameworks/backend/laravel/createModels.ts';
+import type { ISchemaInfo, IColumnInfo } from '@/interfaces/interfaces';
+import { hiddenFields } from '@/frameworks/backend/laravel/createModels';
 
 interface IRelationships {
   hasOne?: string[];

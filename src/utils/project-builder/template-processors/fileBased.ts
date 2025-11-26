@@ -1,11 +1,11 @@
-import type { IFolder, IStructure } from '@/components/FileViewer.tsx';
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import type { ISchemaInfoResult } from '@/utils/getSchemaInfo.ts';
-import { changeCase } from '@/utils/common.ts';
-import { getReplacementsForTable } from '@/utils/project-builder/template-processors/getReplacementsForTable.ts';
-import { replacePlaceholders } from '@/utils/project-builder/utils/replacePlaceholders.ts';
-import { importTemplateAsPlaceholder } from '@/utils/project-builder/template-processors/importTemplateAsPlaceholder.ts';
-import type { IFormStore } from '@/useFormStore.ts';
+import type { IFolder, IStructure } from '@/components/FileViewer';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import type { ISchemaInfoResult } from '@/utils/getSchemaInfo';
+import { changeCase } from '@/utils/common';
+import { getReplacementsForTable } from '@/utils/project-builder/template-processors/getReplacementsForTable';
+import { replacePlaceholders } from '@/utils/project-builder/utils/replacePlaceholders';
+import { importTemplateAsPlaceholder } from '@/utils/project-builder/template-processors/importTemplateAsPlaceholder';
+import type { IFormStore } from '@/useFormStore';
 
 export const processFileBasedTemplate = (
   folderPath: string,

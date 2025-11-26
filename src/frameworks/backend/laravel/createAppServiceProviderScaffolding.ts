@@ -1,8 +1,8 @@
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import { APP_SETTINGS } from '@/constants.ts';
-import { createFile } from '@/helpers/stringHelper.ts';
-import type { IFile } from '@/components/FileViewer.tsx';
-import { changeCase } from '@/utils/common.ts';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import { APP_SETTINGS } from '@/constants';
+import { createFile } from '@/helpers/stringHelper';
+import type { IFile } from '@/components/FileViewer';
+import { changeCase } from '@/utils/common';
 
 const updateOrCreateSection = (
   content: string,

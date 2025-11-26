@@ -1,8 +1,8 @@
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import { createFile } from '@/helpers/stringHelper.ts';
-import { APP_SETTINGS } from '@/constants.ts';
-import type { IStructure } from '@/components/FileViewer.tsx';
-import { getPrimaryKey, changeCase } from '@/utils/common.ts';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import { createFile } from '@/helpers/stringHelper';
+import { APP_SETTINGS } from '@/constants';
+import type { IStructure } from '@/components/FileViewer';
+import { getPrimaryKey, changeCase } from '@/utils/common';
 
 const createControllers = (schemaInfo: ISchemaInfo[]): IStructure => {
   return schemaInfo

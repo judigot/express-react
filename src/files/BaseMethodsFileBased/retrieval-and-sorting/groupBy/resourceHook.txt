@@ -1,5 +1,5 @@
 import { useQuery, type UseQueryOptions } from '@tanstack/react-query';
-import { groupByResources } from '@/hooks/shared/useGroupBy.ts';
+import { groupByResources } from '@/hooks/shared/useGroupBy';
 
 interface IGroupByParams {
   column: string;

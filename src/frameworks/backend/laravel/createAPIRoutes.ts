@@ -1,10 +1,10 @@
-import type { IFile } from '@/components/FileViewer.tsx';
-import baseMethods from '@/frameworks/base-methods/index.ts';
-import { createFile, replacePlaceholder } from '@/helpers/stringHelper.ts';
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import type { TableReplacements } from '@/interfaces/placeholders.ts';
-import { changeCase } from '@/utils/common.ts';
-import generateDomainCode from '@/utils/generateDomainCode.ts';
+import type { IFile } from '@/components/FileViewer';
+import baseMethods from '@/frameworks/base-methods/';
+import { createFile, replacePlaceholder } from '@/helpers/stringHelper';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import type { TableReplacements } from '@/interfaces/placeholders';
+import { changeCase } from '@/utils/common';
+import generateDomainCode from '@/utils/generateDomainCode';
 
 const template = `
 <?php

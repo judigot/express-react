@@ -1,8 +1,8 @@
-import type { IStructure } from '@/components/FileViewer.tsx';
-import type { IBuildContext } from '@/utils/project-builder/interfaces/interfaces.ts';
-import { processYamlStructure } from '@/utils/project-builder/project-processors/processYamlStructure.ts';
-import { getReplacementsForTable } from '@/utils/project-builder/template-processors/getReplacementsForTable.ts';
-import { replacePlaceholders } from '@/utils/project-builder/utils/replacePlaceholders.ts';
+import type { IStructure } from '@/components/FileViewer';
+import type { IBuildContext } from '@/utils/project-builder/interfaces/interfaces';
+import { processYamlStructure } from '@/utils/project-builder/project-processors/processYamlStructure';
+import { getReplacementsForTable } from '@/utils/project-builder/template-processors/getReplacementsForTable';
+import { replacePlaceholders } from '@/utils/project-builder/utils/replacePlaceholders';
 
 export const processDynamicFolders = ({
   folderName,

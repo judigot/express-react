@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient, type UseMutationOptions } from '@tanstack/react-query';
-import { softDeleteResource } from '@/hooks/shared/useSoftDelete.ts';
-import { type I{{tableNamePascalCaseSingular}} } from '@/interfaces/I{{tableNamePascalCaseSingular}}.ts';
+import { softDeleteResource } from '@/hooks/shared/useSoftDelete';
+import { type I{{tableNamePascalCaseSingular}} } from '@/interfaces/I{{tableNamePascalCaseSingular}}';
 
 export const useSoftDelete{{tableNamePascalCaseSingular}} = (
   options?: Omit<

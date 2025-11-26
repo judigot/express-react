@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
-import { getSchemaInfo } from '@/utils/getSchemaInfo.ts';
-import masterSchema from '@/schema-infos/masterSchema.ts';
-import { hiddenFields } from '@/frameworks/backend/laravel/createModels.ts';
+import { getSchemaInfo } from '@/utils/getSchemaInfo';
+import masterSchema from '@/schema-infos/masterSchema';
+import { hiddenFields } from '@/frameworks/backend/laravel/createModels';
 
 describe('useSchemaInfo', () => {
   const schemaInfo = getSchemaInfo(masterSchema);

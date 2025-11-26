@@ -1,6 +1,6 @@
 import { Router, type Request, type Response } from 'express';
-import { fetchRepositoryFiles } from '@/utils/downloadPublicRepoFiles.ts';
-import { convertPublicRepoFilesToStructure } from '@/utils/convertPublicRepoFilesToIStructure.ts';
+import { fetchRepositoryFiles } from '@/utils/downloadPublicRepoFiles';
+import { convertPublicRepoFilesToStructure } from '@/utils/convertPublicRepoFilesToIStructure';
 
 /**
  * Route that fetches files from a public GitHub repository and returns them in a structured format

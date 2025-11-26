@@ -1,6 +1,6 @@
-import type { IFile } from '@/components/FileViewer.tsx';
-import baseMethods from '@/frameworks/base-methods/index.ts';
-import { createFile, replacePlaceholder } from '@/helpers/stringHelper.ts';
+import type { IFile } from '@/components/FileViewer';
+import baseMethods from '@/frameworks/base-methods/';
+import { createFile, replacePlaceholder } from '@/helpers/stringHelper';
 
 const createBaseFiles = (
   type: 'interface' | 'repository' | 'service' | 'controller',

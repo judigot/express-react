@@ -1,4 +1,4 @@
-import { ACTION_FLAGS } from '@/utils/project-builder/constants/actionFlags.ts';
+import { ACTION_FLAGS } from '@/utils/project-builder/constants/actionFlags';
 
 const LOOP = 'LOOP';
 

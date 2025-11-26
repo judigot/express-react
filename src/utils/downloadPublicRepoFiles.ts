@@ -1,5 +1,5 @@
 import { unzipSync, strFromU8 } from 'fflate';
-import { isBinaryFile } from '@/utils/binaryFileUtils.ts';
+import { isBinaryFile } from '@/utils/binaryFileUtils';
 
 export interface IExtractedFile {
   path: string;

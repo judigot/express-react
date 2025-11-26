@@ -1,4 +1,4 @@
-import type { IJSONSchema } from '@/interfaces/interfaces.ts';
+import type { IJSONSchema } from '@/interfaces/interfaces';
 
 export default {
   user: [

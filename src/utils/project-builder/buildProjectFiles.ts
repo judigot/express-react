@@ -1,15 +1,15 @@
-import type { IStructure } from '@/components/FileViewer.tsx';
+import type { IStructure } from '@/components/FileViewer';
 import { parse } from 'yaml';
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import { getSchemaInfo } from '@/utils/getSchemaInfo.ts';
-import { findFileInStructure } from '@/utils/project-builder/utils/findFileInStructure.ts';
-import { processYamlStructure } from '@/utils/project-builder/project-processors/processYamlStructure.ts';
-import { detectCircularImports } from '@/utils/project-builder/utils/detectCircularImports.ts';
-import { extractPlaceholdersFromYaml } from '@/utils/project-builder/utils/extractPlaceholdersFromYaml.ts';
-import { detectCircularPlaceholderImports } from '@/utils/project-builder/utils/detectCircularPlaceholderImports.ts';
-import { loadCoreFiles } from '@/utils/project-builder/utils/loadCoreFiles.ts';
-import { mergeCoreFilesWithScaffolded } from '@/utils/project-builder/utils/mergeCoreFiles.ts';
-import type { IFormStore } from '@/useFormStore.ts';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import { getSchemaInfo } from '@/utils/getSchemaInfo';
+import { findFileInStructure } from '@/utils/project-builder/utils/findFileInStructure';
+import { processYamlStructure } from '@/utils/project-builder/project-processors/processYamlStructure';
+import { detectCircularImports } from '@/utils/project-builder/utils/detectCircularImports';
+import { extractPlaceholdersFromYaml } from '@/utils/project-builder/utils/extractPlaceholdersFromYaml';
+import { detectCircularPlaceholderImports } from '@/utils/project-builder/utils/detectCircularPlaceholderImports';
+import { loadCoreFiles } from '@/utils/project-builder/utils/loadCoreFiles';
+import { mergeCoreFilesWithScaffolded } from '@/utils/project-builder/utils/mergeCoreFiles';
+import type { IFormStore } from '@/useFormStore';
 
 export const buildProjectFiles = (
   projectYamlPath: string,

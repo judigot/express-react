@@ -1,5 +1,5 @@
 import { type ReactElement, useState } from 'react';
-import type { JSONFormStructure } from './DynamicFormStructure.ts';
+import type { JSONFormStructure } from './DynamicFormStructure';
 
 /* Prompt
 Don't use prop spreading.
@@ -82,7 +82,13 @@ export function FormParser({
     const name = field.key;
     const placeholder = field.placeholder;
     const ariaLabel = field.label;
-    const value = formData[field.key] ?? ''; // Set value from formData
+    const fieldValue = formData[field.key];
+    const value =
+      fieldValue === null || fieldValue === undefined
+        ? ''
+        : typeof fieldValue === 'string' || typeof fieldValue === 'number'
+          ? String(fieldValue)
+          : '';
 
     switch (field.widget) {
       case 'text':

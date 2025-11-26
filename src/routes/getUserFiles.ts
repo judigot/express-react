@@ -1,5 +1,5 @@
 import { Router, type Request, type Response } from 'express';
-import convertLocalFilesToIStructure from '@/utils/convertLocalFilesToIStructure.ts';
+import convertLocalFilesToIStructure from '@/utils/convertLocalFilesToIStructure';
 
 const router = Router();
 

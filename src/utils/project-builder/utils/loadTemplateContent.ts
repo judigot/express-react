@@ -1,7 +1,7 @@
-import type { IStructure, IFolder, IFile } from '@/components/FileViewer.tsx';
-import { processRelativePath } from '@/utils/project-builder/utils/processRelativePath.ts';
-import { ACTION_FLAGS } from '@/utils/project-builder/constants/actionFlags.ts';
-import { TEMPLATE_OPTIONS } from '@/utils/project-builder/constants/templateActions.ts';
+import type { IStructure, IFolder, IFile } from '@/components/FileViewer';
+import { processRelativePath } from '@/utils/project-builder/utils/processRelativePath';
+import { ACTION_FLAGS } from '@/utils/project-builder/constants/actionFlags';
+import { TEMPLATE_OPTIONS } from '@/utils/project-builder/constants/templateActions';
 
 const navigateToFile = (store: IStructure, filePath: string): IFile | null => {
   const normPath = filePath.startsWith('/') ? filePath.substring(1) : filePath;

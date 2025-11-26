@@ -1,9 +1,9 @@
 import { describe, it, expect } from 'vitest';
-import { normalizeWhitespace } from '@/helpers/stringHelper.ts';
-import generateSQLDirectJoins from '@/utils/generateSQLDirectJoins.ts';
-import manyToMany from '@/schema-infos/manyToMany.ts';
-import oneToMany from '@/schema-infos/oneToMany.ts';
-import oneToOne from '@/schema-infos/oneToOne.ts';
+import { normalizeWhitespace } from '@/helpers/stringHelper';
+import generateSQLDirectJoins from '@/utils/generateSQLDirectJoins';
+import manyToMany from '@/schema-infos/manyToMany';
+import oneToMany from '@/schema-infos/oneToMany';
+import oneToOne from '@/schema-infos/oneToOne';
 
 describe('generateSQLDirectJoins', () => {
   const userPostOneToOneSchemaInfo = oneToOne;

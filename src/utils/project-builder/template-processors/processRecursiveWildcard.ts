@@ -1,4 +1,4 @@
-import type { IFolder, IStructure } from '@/components/FileViewer.tsx';
+import type { IFolder, IStructure } from '@/components/FileViewer';
 
 /**
  * Finds all folders that match a wildcard path pattern.

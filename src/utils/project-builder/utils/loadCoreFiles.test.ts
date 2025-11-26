@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { loadCoreFiles } from './loadCoreFiles.ts';
-import type { IStructure } from '@/components/FileViewer.tsx';
+import { loadCoreFiles } from './loadCoreFiles';
+import type { IStructure } from '@/components/FileViewer';
 
 describe('loadCoreFiles', () => {
   const createMockStructure = (): IStructure => [

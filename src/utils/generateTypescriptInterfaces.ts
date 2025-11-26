@@ -1,9 +1,9 @@
-import type { ISchemaInfo, IColumnInfo } from '@/interfaces/interfaces.ts';
+import type { ISchemaInfo, IColumnInfo } from '@/interfaces/interfaces';
 import {
   changeCase,
   generateColumnDefinition,
   getTypeMapping,
-} from '@/utils/common.ts';
+} from '@/utils/common';
 
 const generateTypescriptInterfaces = ({
   schemaInfo,

@@ -1,22 +1,22 @@
-import { checkConditions } from '@/utils/project-builder/project-processors/checkConditions.ts';
-import { extractFileNameFromPath } from '@/utils/project-builder/helpers/extractFileNameFromPath.ts';
-import { formatFileContent } from '@/utils/project-builder/helpers/formatFileContent.ts';
-import { getReplacementsForTable } from '@/utils/project-builder/template-processors/getReplacementsForTable.ts';
-import type { IStructure } from '@/components/FileViewer.tsx';
-import { loadTemplateContent } from '@/utils/project-builder/utils/loadTemplateContent.ts';
-import { parseCommand } from '@/utils/project-builder/utils/parseCommand.ts';
-import { parseConditionalFolder } from '@/utils/project-builder/project-processors/parseConditionalFolder.ts';
-import { processDynamicFolders } from '@/utils/project-builder/project-processors/processDynamicFolders.ts';
-import { processIterateInTemplate } from '@/utils/project-builder/template-processors/processIterateInTemplate.ts';
-import { processLoopTables } from '@/utils/project-builder/template-processors/processIterateCommand.ts';
-import { processMultipleFiles } from '@/utils/project-builder/project-processors/processMultipleFiles.ts';
-import { importProject } from '@/utils/project-builder/project-processors/importProject.ts';
-import { createBaseMethodFile } from '@/utils/project-builder/project-processors/createBaseMethodFile.ts';
-import { replacePlaceholders } from '@/utils/project-builder/utils/replacePlaceholders.ts';
-import { PROJECT_ACTIONS } from '@/utils/project-builder/constants/projectActions.ts';
-import { ACTION_FLAGS } from '@/utils/project-builder/constants/actionFlags.ts';
-import type { IBuildContext } from '@/utils/project-builder/interfaces/interfaces.ts';
-import { processTemplatePathWithFlag } from '@/utils/project-builder/utils/processRelativePath.ts';
+import { checkConditions } from '@/utils/project-builder/project-processors/checkConditions';
+import { extractFileNameFromPath } from '@/utils/project-builder/helpers/extractFileNameFromPath';
+import { formatFileContent } from '@/utils/project-builder/helpers/formatFileContent';
+import { getReplacementsForTable } from '@/utils/project-builder/template-processors/getReplacementsForTable';
+import type { IStructure } from '@/components/FileViewer';
+import { loadTemplateContent } from '@/utils/project-builder/utils/loadTemplateContent';
+import { parseCommand } from '@/utils/project-builder/utils/parseCommand';
+import { parseConditionalFolder } from '@/utils/project-builder/project-processors/parseConditionalFolder';
+import { processDynamicFolders } from '@/utils/project-builder/project-processors/processDynamicFolders';
+import { processIterateInTemplate } from '@/utils/project-builder/template-processors/processIterateInTemplate';
+import { processLoopTables } from '@/utils/project-builder/template-processors/processIterateCommand';
+import { processMultipleFiles } from '@/utils/project-builder/project-processors/processMultipleFiles';
+import { importProject } from '@/utils/project-builder/project-processors/importProject';
+import { createBaseMethodFile } from '@/utils/project-builder/project-processors/createBaseMethodFile';
+import { replacePlaceholders } from '@/utils/project-builder/utils/replacePlaceholders';
+import { PROJECT_ACTIONS } from '@/utils/project-builder/constants/projectActions';
+import { ACTION_FLAGS } from '@/utils/project-builder/constants/actionFlags';
+import type { IBuildContext } from '@/utils/project-builder/interfaces/interfaces';
+import { processTemplatePathWithFlag } from '@/utils/project-builder/utils/processRelativePath';
 
 const ROOT_LEVEL_ACTIONS = [
   PROJECT_ACTIONS.CREATE_FILE,

@@ -1,4 +1,4 @@
-import config from '@/config/config.ts';
+import config from '@/config/config';
 
 export const checkConditions = (conditions: string[]): boolean => {
   return conditions.every((condition) => {

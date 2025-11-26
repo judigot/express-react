@@ -1,4 +1,4 @@
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
 
 export const masterSchema = [
   // Product-Order-Customer (Many-to-Many)
@@ -286,5 +286,5 @@ export const masterSchema = [
 
 export default masterSchema;
 
-// import pics from './pics.ts';
+// import pics from './pics';
 // export default pics;

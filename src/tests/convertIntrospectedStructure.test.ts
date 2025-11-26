@@ -1,16 +1,16 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import convertIntrospectedStructure from '@/utils/convertIntrospectedStructure.ts';
+import convertIntrospectedStructure from '@/utils/convertIntrospectedStructure';
 import type {
   IIntrospectedSchemaInfo,
   ISchemaInfo,
-} from '@/interfaces/interfaces.ts';
-import manyToMany from '@/schema-infos/manyToMany.ts';
-import oneToMany from '@/schema-infos/oneToMany.ts';
-import oneToOne from '@/schema-infos/oneToOne.ts';
+} from '@/interfaces/interfaces';
+import manyToMany from '@/schema-infos/manyToMany';
+import oneToMany from '@/schema-infos/oneToMany';
+import oneToOne from '@/schema-infos/oneToOne';
 import {
   setupTypeMappings,
   teardownTypeMappings,
-} from '@/tests/helpers/setupTypeMappings.ts';
+} from '@/tests/helpers/setupTypeMappings';
 
 describe('convertIntrospectedStructure', () => {
   beforeEach(() => {

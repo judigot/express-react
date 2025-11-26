@@ -1,4 +1,4 @@
-import { extractFileNameFromPath } from '@/utils/project-builder/helpers/extractFileNameFromPath.ts';
+import { extractFileNameFromPath } from '@/utils/project-builder/helpers/extractFileNameFromPath';
 
 /**
  * Determines if a path is relative

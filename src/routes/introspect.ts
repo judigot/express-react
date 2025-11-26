@@ -1,6 +1,6 @@
 import { Router, type Request, type Response } from 'express';
-import { introspectService } from '@/services/introspectService.ts';
-import type { DBTypes } from '@/interfaces/interfaces.ts';
+import { introspectService } from '@/services/introspectService';
+import type { DBTypes } from '@/interfaces/interfaces';
 
 const router = Router();
 

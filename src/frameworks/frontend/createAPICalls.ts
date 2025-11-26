@@ -1,12 +1,12 @@
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import { APP_SETTINGS } from '@/constants.ts';
-import type { IStructure } from '@/components/FileViewer.tsx';
-import { getPrimaryKey, changeCase } from '@/utils/common.ts';
-import { createFile } from '@/helpers/stringHelper.ts';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import { APP_SETTINGS } from '@/constants';
+import type { IStructure } from '@/components/FileViewer';
+import { getPrimaryKey, changeCase } from '@/utils/common';
+import { createFile } from '@/helpers/stringHelper';
 
 const CREATE_TEMPLATE = `
 import axiosInstance from '../axiosInstance';
-import { I{{className}} } from '@/interfaces/interfaces.ts';
+import { I{{className}} } from '@/interfaces/interfaces';
 
 type IBody = Omit<I{{className}}, '{{primaryKey}}' | 'created_at' | 'updated_at'>;
 
@@ -20,7 +20,7 @@ export const create{{className}} = async (
 
 const READ_TEMPLATE = `
 import axiosInstance from '../axiosInstance';
-import { I{{className}} } from '@/interfaces/interfaces.ts';
+import { I{{className}} } from '@/interfaces/interfaces';
 
 export const read{{className}} = async (): Promise<I{{className}}[]> => {
   const response = await axiosInstance.get<I{{className}}[]>('/{{tableNamePlural}}');
@@ -30,7 +30,7 @@ export const read{{className}} = async (): Promise<I{{className}}[]> => {
 
 const UPDATE_TEMPLATE = `
 import axiosInstance from '../axiosInstance';
-import { I{{className}} } from '@/interfaces/interfaces.ts';
+import { I{{className}} } from '@/interfaces/interfaces';
 
 type IBody = I{{className}};
 

@@ -1,9 +1,9 @@
 import type React from 'react';
 import { useState, useEffect, useRef } from 'react';
 import JSON5 from 'json5';
-import { useWordEditor } from '@/components/JSONSchemaEditor/hooks/useWordEditor.ts';
-import type { IJSONSchema } from '@/interfaces/interfaces.ts';
-import { useFormStore } from '@/useFormStore.ts';
+import { useWordEditor } from '@/components/JSONSchemaEditor/hooks/useWordEditor';
+import type { IJSONSchema } from '@/interfaces/interfaces';
+import { useFormStore } from '@/useFormStore';
 
 const App: React.FC = () => {
   const { schemaInput, setFormData } = useFormStore();

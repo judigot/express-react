@@ -1,13 +1,13 @@
 import type React from 'react';
 import { useState, useEffect, useRef } from 'react';
 import JSON5 from 'json5';
-import { useWordEditor } from '@/components/JSONSchemaEditor/hooks/useWordEditor.ts';
-import type { IJSONSchema } from '@/interfaces/interfaces.ts';
-import { useFormStore } from '@/useFormStore.ts';
-import TableAdder from '@/components/TableAdder.tsx';
-import { addPrimaryKeys } from '@/utils/common.ts';
-import renameTable from '@/utils/renameTable.ts';
-import useTransformationsStore from '@/useTransformationsStore.ts';
+import { useWordEditor } from '@/components/JSONSchemaEditor/hooks/useWordEditor';
+import type { IJSONSchema } from '@/interfaces/interfaces';
+import { useFormStore } from '@/useFormStore';
+import TableAdder from '@/components/TableAdder';
+import { addPrimaryKeys } from '@/utils/common';
+import renameTable from '@/utils/renameTable';
+import useTransformationsStore from '@/useTransformationsStore';
 
 function JSONSchemaEditor() {
   const { schemaInput, setFormData } = useFormStore();

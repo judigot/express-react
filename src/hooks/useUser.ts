@@ -1,7 +1,7 @@
 import { useAuth0 } from '@auth0/auth0-react';
 import { useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { useUserStore } from '@/useUserStore.ts';
+import { useUserStore } from '@/useUserStore';
 
 interface IUserMetadataResponse {
   success?: boolean;
@@ -49,7 +49,7 @@ const isTokenResponse = (val: unknown): val is ITokenResponse => {
   );
 };
 
-import { getApiUrl } from '@/utils/getApiUrl.ts';
+import { getApiUrl } from '@/utils/getApiUrl';
 
 const getBackendUrl = (): string => {
   return getApiUrl();

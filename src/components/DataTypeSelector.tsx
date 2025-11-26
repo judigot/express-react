@@ -1,6 +1,6 @@
 import type React from 'react';
-import { useMockDatabaseStore } from '@/useMockDatabaseStore.ts';
-import { useFormStore } from '@/useFormStore.ts';
+import { useMockDatabaseStore } from '@/useMockDatabaseStore';
+import { useFormStore } from '@/useFormStore';
 
 interface IDataTypeSelectorProps {
   value: string;

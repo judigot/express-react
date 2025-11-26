@@ -13,16 +13,16 @@ import {
   Save as SaveIcon,
   Download as DownloadIcon,
 } from '@mui/icons-material';
-import { handleCopy } from '@/helpers/stringHelper.ts';
+import { handleCopy } from '@/helpers/stringHelper';
 import Editor, { type OnMount } from '@monaco-editor/react';
-import { useModalStore } from '@/components/Modal/base/modalStore.tsx';
-import ContextMenu from '@/components/UI/ContextMenu.tsx';
-import zipAndDownloadIStructure from '@/utils/zipIStructure.ts';
-import { useFormStore } from '@/useFormStore.ts';
-import useTransformationsStore from '@/useTransformationsStore.ts';
-import { useProjectStore } from '@/useProjectStore.ts';
-import { useMockDatabaseStore } from '@/useMockDatabaseStore.ts';
-import { getApiUrl } from '@/utils/getApiUrl.ts';
+import { useModalStore } from '@/components/Modal/base/modalStore';
+import ContextMenu from '@/components/UI/ContextMenu';
+import zipAndDownloadIStructure from '@/utils/zipIStructure';
+import { useFormStore } from '@/useFormStore';
+import useTransformationsStore from '@/useTransformationsStore';
+import { useProjectStore } from '@/useProjectStore';
+import { useMockDatabaseStore } from '@/useMockDatabaseStore';
+import { getApiUrl } from '@/utils/getApiUrl';
 
 export interface IBase {
   name: string;

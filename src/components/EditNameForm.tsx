@@ -1,4 +1,4 @@
-import { useModalStore } from '@/components/Modal/base/modalStore.tsx';
+import { useModalStore } from '@/components/Modal/base/modalStore';
 import { useState, useRef, useEffect } from 'react';
 
 function InputValueModal({

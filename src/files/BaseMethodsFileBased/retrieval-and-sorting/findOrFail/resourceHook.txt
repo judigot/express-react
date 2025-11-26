@@ -1,6 +1,6 @@
 import { useQuery, type UseQueryOptions } from '@tanstack/react-query';
-import { findOrFailResource } from '@/hooks/shared/useFindOrFail.ts';
-import { type I{{tableNamePascalCaseSingular}} } from '@/interfaces/I{{tableNamePascalCaseSingular}}.ts';
+import { findOrFailResource } from '@/hooks/shared/useFindOrFail';
+import { type I{{tableNamePascalCaseSingular}} } from '@/interfaces/I{{tableNamePascalCaseSingular}}';
 
 export const useFindOrFail{{tableNamePascalCaseSingular}} = (
   id: string | number,

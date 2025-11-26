@@ -1,11 +1,11 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
-import type { IFile, IStructure } from '@/components/FileViewer.tsx';
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import { buildProjectFiles } from '@/utils/project-builder/buildProjectFiles.ts';
-import { useMockDatabaseStore } from '@/useMockDatabaseStore.ts';
-import { useFormStore } from '@/useFormStore.ts';
-import { useUserStore } from '@/useUserStore.ts';
+import type { IFile, IStructure } from '@/components/FileViewer';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import { buildProjectFiles } from '@/utils/project-builder/buildProjectFiles';
+import { useMockDatabaseStore } from '@/useMockDatabaseStore';
+import { useFormStore } from '@/useFormStore';
+import { useUserStore } from '@/useUserStore';
 import equal from 'fast-deep-equal';
 
 type IProjectBuildCache = IStructure;

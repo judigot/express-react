@@ -4,7 +4,7 @@ import {
   createJSONStorage,
   type PersistOptions,
 } from 'zustand/middleware';
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
 
 // Helper function to calculate string similarity
 const getSimilarity = (str1: string, str2: string): number => {

@@ -3,16 +3,16 @@ import ReactDOM from 'react-dom/client';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import '@/styles/main.scss';
-import App from '@/App.tsx';
-import SQLSchemaInputModal from '@/components/SQLSchemaInputModal.tsx';
-import AuthGuard from '@/components/AuthGuard.tsx';
-// import TransformationTester from '@/TransformationTester.tsx';
-import ModalProvider from '@/components/Modal/base/ModalProvider.tsx';
+import App from '@/App';
+import SQLSchemaInputModal from '@/components/SQLSchemaInputModal';
+import AuthGuard from '@/components/AuthGuard';
+// import TransformationTester from '@/TransformationTester';
+import ModalProvider from '@/components/Modal/base/ModalProvider';
 
-// import { FormParser } from '@/dynamic-form/ReactFormParser.tsx';
-// import { JSONFormStructure } from '@/dynamic-form/DynamicFormStructure.ts';import { parse, stringify } from 'yaml'
+// import { FormParser } from '@/dynamic-form/ReactFormParser';
+// import { JSONFormStructure } from '@/dynamic-form/DynamicFormStructure';import { parse, stringify } from 'yaml'
 
-import formatCode from '@/utils/formatCode.ts';
+import formatCode from '@/utils/formatCode';
 
 import { Auth0Provider } from '@auth0/auth0-react';
 

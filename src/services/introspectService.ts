@@ -2,8 +2,8 @@ import {
   type DBTypes,
   type IIntrospectedSchemaInfo,
   isITableArray,
-} from '@/interfaces/interfaces.ts';
-import introspect from '@/utils/introspect.ts';
+} from '@/interfaces/interfaces';
+import introspect from '@/utils/introspect';
 
 interface IIntrospectRequest {
   dbType: DBTypes;

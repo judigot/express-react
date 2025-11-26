@@ -1,5 +1,5 @@
-import type { IFile } from '@/components/FileViewer.tsx';
-import { createFile } from '@/helpers/stringHelper.ts';
+import type { IFile } from '@/components/FileViewer';
+import { createFile } from '@/helpers/stringHelper';
 
 const createDataTypeParser = (): IFile => {
   const template = `

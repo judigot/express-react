@@ -1,10 +1,10 @@
 import { describe, it, expect } from 'vitest';
-import generateDomainCode from '@/utils/generateDomainCode.ts';
-import { normalizeWhitespace } from '@/helpers/stringHelper.ts';
-import { watermark } from '@/constants.ts';
-import oneToOne from '@/schema-infos/oneToOne.ts';
-import oneToMany from '@/schema-infos/oneToMany.ts';
-import manyToMany from '@/schema-infos/manyToMany.ts';
+import generateDomainCode from '@/utils/generateDomainCode';
+import { normalizeWhitespace } from '@/helpers/stringHelper';
+import { watermark } from '@/constants';
+import oneToOne from '@/schema-infos/oneToOne';
+import oneToMany from '@/schema-infos/oneToMany';
+import manyToMany from '@/schema-infos/manyToMany';
 
 const template = `
     <?php

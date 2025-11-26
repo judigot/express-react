@@ -1,5 +1,5 @@
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import { useFormStore } from '@/useFormStore.ts';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import { useFormStore } from '@/useFormStore';
 
 function generateSQLDeleteTables(schemaInfo: ISchemaInfo[]) {
   const quote = useFormStore.getState().quote;

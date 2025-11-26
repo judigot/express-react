@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import type { ClipboardEvent } from 'react';
-import { useUser } from '@/hooks/useUser.ts';
-import { useUserStore } from '@/useUserStore.ts';
-import { ContextMenu } from '@/components/UI/ContextMenu.tsx';
-import { getApiUrl } from '@/utils/getApiUrl.ts';
+import { useUser } from '@/hooks/useUser';
+import { useUserStore } from '@/useUserStore';
+import { ContextMenu } from '@/components/UI/ContextMenu';
+import { getApiUrl } from '@/utils/getApiUrl';
 
 const generateEntryId = (): string => {
   if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) {

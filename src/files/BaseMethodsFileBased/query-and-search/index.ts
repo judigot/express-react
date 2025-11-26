@@ -1,9 +1,9 @@
-import type { IMethod } from '@/interfaces/IRepositoryPatternStructure.ts';
-import findByAttributes from './findByAttributes/index.ts';
-import paginate from './paginate/index.ts';
-import search from './search/index.ts';
-import count from './count/index.ts';
-import exists from './exists/index.ts';
+import type { IMethod } from '@/interfaces/IRepositoryPatternStructure';
+import findByAttributes from './findByAttributes/';
+import paginate from './paginate/';
+import search from './search/';
+import count from './count/';
+import exists from './exists/';
 
 export default [
   findByAttributes,

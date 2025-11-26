@@ -1,15 +1,15 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import identifySchema from '@/utils/identifySchema.ts';
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
+import identifySchema from '@/utils/identifySchema';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
 import {
   usersPostOneToOneSchema,
   usersPostsOneToManySchema,
   POSSchema,
-} from '@/json-schemas/index.ts';
+} from '@/json-schemas/';
 import {
   setupTypeMappings,
   teardownTypeMappings,
-} from '@/tests/helpers/setupTypeMappings.ts';
+} from '@/tests/helpers/setupTypeMappings';
 
 describe('identifySchema', () => {
   beforeEach(() => {

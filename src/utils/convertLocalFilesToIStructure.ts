@@ -1,7 +1,7 @@
-import type { IStructure, IFile, IFolder } from '@/components/FileViewer.tsx';
+import type { IStructure, IFile, IFolder } from '@/components/FileViewer';
 import * as fs from 'fs';
 import * as path from 'path';
-import { isBinaryFile } from '@/utils/binaryFileUtils.ts';
+import { isBinaryFile } from '@/utils/binaryFileUtils';
 
 /**
  * Recursively reads a directory and converts its structure to IStructure format

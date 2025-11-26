@@ -1,4 +1,4 @@
-import type { Replacements } from '@/utils/project-builder/interfaces/interfaces.ts';
+import type { Replacements } from '@/utils/project-builder/interfaces/interfaces';
 
 interface ICircularPlaceholderResult {
   hasCircularReference: boolean;

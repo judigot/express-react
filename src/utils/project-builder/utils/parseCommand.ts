@@ -1,5 +1,5 @@
-import { ACTION_FLAGS } from '@/utils/project-builder/constants/actionFlags.ts';
-import type { IActionFlags } from '@/utils/project-builder/interfaces/interfaces.ts';
+import { ACTION_FLAGS } from '@/utils/project-builder/constants/actionFlags';
+import type { IActionFlags } from '@/utils/project-builder/interfaces/interfaces';
 
 // Flag prefix used for all command options
 const FLAG_PREFIX = '--';

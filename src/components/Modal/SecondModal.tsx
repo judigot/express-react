@@ -1,5 +1,5 @@
-import { useModalStore } from "@/components/Modal/base/modalStore.tsx";
-import ThirdModal from "@/components/Modal/ThirdModal.tsx";
+import { useModalStore } from "@/components/Modal/base/modalStore";
+import ThirdModal from "@/components/Modal/ThirdModal";
 
 function SecondModal() {
   const { openModal } = useModalStore();

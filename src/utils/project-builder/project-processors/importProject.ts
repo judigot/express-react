@@ -1,12 +1,12 @@
-import type { IStructure } from '@/components/FileViewer.tsx';
-import { parseCommand } from '@/utils/project-builder/utils/parseCommand.ts';
-import { processYamlStructure } from '@/utils/project-builder/project-processors/processYamlStructure.ts';
-import { replacePlaceholders } from '@/utils/project-builder/utils/replacePlaceholders.ts';
-import { getReplacementsForTable } from '@/utils/project-builder/template-processors/getReplacementsForTable.ts';
-import { ACTION_FLAGS } from '@/utils/project-builder/constants/actionFlags.ts';
-import { findFileInStructure } from '@/utils/project-builder/utils/findFileInStructure.ts';
+import type { IStructure } from '@/components/FileViewer';
+import { parseCommand } from '@/utils/project-builder/utils/parseCommand';
+import { processYamlStructure } from '@/utils/project-builder/project-processors/processYamlStructure';
+import { replacePlaceholders } from '@/utils/project-builder/utils/replacePlaceholders';
+import { getReplacementsForTable } from '@/utils/project-builder/template-processors/getReplacementsForTable';
+import { ACTION_FLAGS } from '@/utils/project-builder/constants/actionFlags';
+import { findFileInStructure } from '@/utils/project-builder/utils/findFileInStructure';
 import { parse } from 'yaml';
-import type { IBuildContext } from '@/utils/project-builder/interfaces/interfaces.ts';
+import type { IBuildContext } from '@/utils/project-builder/interfaces/interfaces';
 
 /**
  * Type guard to check if a value is a valid project structure object

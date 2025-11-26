@@ -1,4 +1,4 @@
-import type { Replacements } from '@/utils/project-builder/interfaces/interfaces.ts';
+import type { Replacements } from '@/utils/project-builder/interfaces/interfaces';
 
 /**
  * Extracts a separator value from a dynamic property string

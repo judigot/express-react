@@ -1,10 +1,10 @@
-import masterSchema from '@/schema-infos/masterSchema.ts';
-import { buildProjectFiles } from '@/utils/project-builder/buildProjectFiles.ts';
-import convertLocalFilesToIStructure from '@/utils/convertLocalFilesToIStructure.ts';
-import type { IFormStore } from '@/useFormStore.ts';
-import { frameworks } from '@/useFormStore.ts';
-import { CREATION_MODES } from '@/constants.ts';
-import masterJSONSchema from '@/json-schemas/masterJSONSchema.ts';
+import masterSchema from '@/schema-infos/masterSchema';
+import { buildProjectFiles } from '@/utils/project-builder/buildProjectFiles';
+import convertLocalFilesToIStructure from '@/utils/convertLocalFilesToIStructure';
+import type { IFormStore } from '@/useFormStore';
+import { frameworks } from '@/useFormStore';
+import { CREATION_MODES } from '@/constants';
+import masterJSONSchema from '@/json-schemas/masterJSONSchema';
 
 describe('Build Project Files', () => {
   it('should build project files based on templates', () => {

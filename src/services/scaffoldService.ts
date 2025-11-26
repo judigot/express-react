@@ -1,15 +1,15 @@
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
 import path from 'node:path';
-import createFolderStructure from '@/utils/createFolderStructure.ts';
-import { useFolderStructures } from '@/frameworks/useFolderStructures.ts';
-import { mergeArrayOfObjects } from '@/utils/mergeArrayOfObjects.ts';
+import createFolderStructure from '@/utils/createFolderStructure';
+import { useFolderStructures } from '@/frameworks/useFolderStructures';
+import { mergeArrayOfObjects } from '@/utils/mergeArrayOfObjects';
 import https from 'node:https';
 import http, { type IncomingMessage } from 'node:http';
 import fs from 'node:fs';
-import { changeCase } from '@/utils/common.ts';
-import type { IFormStore } from '@/useFormStore.ts';
-import { extractDBConnectionInfo } from '@/utils/extractDBConnectionInfo.ts';
-import { createOrResetDatabase } from '@/utils/databaseOperations.ts';
+import { changeCase } from '@/utils/common';
+import type { IFormStore } from '@/useFormStore';
+import { extractDBConnectionInfo } from '@/utils/extractDBConnectionInfo';
+import { createOrResetDatabase } from '@/utils/databaseOperations';
 
 interface IScaffoldRequest {
   formData: IFormStore;

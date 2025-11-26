@@ -1,16 +1,16 @@
-import type { IFile } from '@/components/FileViewer.tsx';
-import { ACTION_FLAGS } from '@/utils/project-builder/constants/actionFlags.ts';
-import { extractFileNameFromPath } from '@/utils/project-builder/helpers/extractFileNameFromPath.ts';
-import { formatFileContent } from '@/utils/project-builder/helpers/formatFileContent.ts';
+import type { IFile } from '@/components/FileViewer';
+import { ACTION_FLAGS } from '@/utils/project-builder/constants/actionFlags';
+import { extractFileNameFromPath } from '@/utils/project-builder/helpers/extractFileNameFromPath';
+import { formatFileContent } from '@/utils/project-builder/helpers/formatFileContent';
 import type {
   IActionFlags,
   IBuildContext,
-} from '@/utils/project-builder/interfaces/interfaces.ts';
-import { getReplacementsForTable } from '@/utils/project-builder/template-processors/getReplacementsForTable.ts';
-import { processIterateInTemplate } from '@/utils/project-builder/template-processors/processIterateInTemplate.ts';
-import { processLoopTables } from '@/utils/project-builder/template-processors/processIterateCommand.ts';
-import { loadTemplateContent } from '@/utils/project-builder/utils/loadTemplateContent.ts';
-import { replacePlaceholders } from '@/utils/project-builder/utils/replacePlaceholders.ts';
+} from '@/utils/project-builder/interfaces/interfaces';
+import { getReplacementsForTable } from '@/utils/project-builder/template-processors/getReplacementsForTable';
+import { processIterateInTemplate } from '@/utils/project-builder/template-processors/processIterateInTemplate';
+import { processLoopTables } from '@/utils/project-builder/template-processors/processIterateCommand';
+import { loadTemplateContent } from '@/utils/project-builder/utils/loadTemplateContent';
+import { replacePlaceholders } from '@/utils/project-builder/utils/replacePlaceholders';
 
 interface IMultipleFilesContext extends Omit<IBuildContext, 'table'> {
   command: string;
@@ -30,9 +30,6 @@ export const processMultipleFiles = ({
   if (!fileName || fileName.length === 0) {
     return [];
   }
-
-  // If the command was a parameter such as command(param), extracting just the command
-  const _fileNameWithoutParams = fileName.replace(/\([^)]*\)/g, '');
 
   // Get the template name from either the explicit template option or use the filename
   const templateOption = options[ACTION_FLAGS.TEMPLATE];

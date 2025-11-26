@@ -1,4 +1,4 @@
-import { generateInterface } from '@/utils/_interfaceGenerator.ts';
+import { generateInterface } from '@/utils/_interfaceGenerator';
 import { useEffect, useState } from 'react';
 
 function App() {

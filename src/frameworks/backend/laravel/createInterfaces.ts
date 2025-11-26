@@ -1,9 +1,9 @@
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import { generateModelImports, changeCase } from '@/utils/common.ts';
-import { APP_SETTINGS } from '@/constants.ts';
-import type { IFile } from '@/components/FileViewer.tsx';
-import { createFile } from '@/helpers/stringHelper.ts';
-import generateDomainCode from '@/utils/generateDomainCode.ts';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import { generateModelImports, changeCase } from '@/utils/common';
+import { APP_SETTINGS } from '@/constants';
+import type { IFile } from '@/components/FileViewer';
+import { createFile } from '@/helpers/stringHelper';
+import generateDomainCode from '@/utils/generateDomainCode';
 
 const template = `
 <?php

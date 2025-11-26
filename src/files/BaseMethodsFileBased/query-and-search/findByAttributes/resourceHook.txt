@@ -1,6 +1,6 @@
 import { useQuery, type UseQueryOptions } from '@tanstack/react-query';
-import { findByAttributesResources } from '@/hooks/shared/useFindByAttributes.ts';
-import { type I{{tableNamePascalCaseSingular}} } from '@/interfaces/I{{tableNamePascalCaseSingular}}.ts';
+import { findByAttributesResources } from '@/hooks/shared/useFindByAttributes';
+import { type I{{tableNamePascalCaseSingular}} } from '@/interfaces/I{{tableNamePascalCaseSingular}}';
 
 interface IFindByAttributesParams {
   attributes: Record<string, unknown>;

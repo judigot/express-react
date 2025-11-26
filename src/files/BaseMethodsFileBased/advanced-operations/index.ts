@@ -1,13 +1,13 @@
-import type { IMethod } from '@/interfaces/IRepositoryPatternStructure.ts';
-import getWithRelations from './getWithRelations/index.ts';
-import pluck from './pluck/index.ts';
-import firstOrCreate from './firstOrCreate/index.ts';
-import firstOrNew from './firstOrNew/index.ts';
-import chunk from './chunk/index.ts';
-import each from './each/index.ts';
-import whereIn from './whereIn/index.ts';
-import whereNotIn from './whereNotIn/index.ts';
-import whereBetween from './whereBetween/index.ts';
+import type { IMethod } from '@/interfaces/IRepositoryPatternStructure';
+import getWithRelations from './getWithRelations/';
+import pluck from './pluck/';
+import firstOrCreate from './firstOrCreate/';
+import firstOrNew from './firstOrNew/';
+import chunk from './chunk/';
+import each from './each/';
+import whereIn from './whereIn/';
+import whereNotIn from './whereNotIn/';
+import whereBetween from './whereBetween/';
 
 export default [
   getWithRelations,

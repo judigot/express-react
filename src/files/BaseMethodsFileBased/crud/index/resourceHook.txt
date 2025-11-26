@@ -1,5 +1,5 @@
 import { useQueryInstance } from '@/vendor/useQueryInstance';
-import { useIndex } from '@/hooks/shared/useIndex.ts';
+import { useIndex } from '@/hooks/shared/use';
 import { type I{{tableNamePascalCaseSingular}} } from '@/interfaces/I{{tableNamePascalCaseSingular}}';
 
 export const use{{tableNamePascalCaseSingular}} = (

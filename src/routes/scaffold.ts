@@ -1,7 +1,7 @@
 import { Router, type Request, type Response } from 'express';
-import { scaffoldService } from '@/services/scaffoldService.ts';
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import type { IFormStore } from '@/useFormStore.ts';
+import { scaffoldService } from '@/services/scaffoldService';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import type { IFormStore } from '@/useFormStore';
 
 const router = Router();
 

@@ -1,5 +1,5 @@
 import { useQuery, type UseQueryOptions } from '@tanstack/react-query';
-import { pluckResources } from '@/hooks/shared/usePluck.ts';
+import { pluckResources } from '@/hooks/shared/usePluck';
 
 interface IPluckParams {
   column: string;

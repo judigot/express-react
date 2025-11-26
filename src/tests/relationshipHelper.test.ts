@@ -1,8 +1,8 @@
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
 import {
   addRelationship,
   purgeForeignKeyTraces,
-} from '@/helpers/relationshipHelper.ts';
+} from '@/helpers/relationshipHelper';
 
 describe('relationshipHelper', () => {
   describe('addRelationship', () => {

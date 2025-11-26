@@ -4,8 +4,8 @@ import {
   type UseQueryResult,
   useQuery,
 } from '@tanstack/react-query';
-import type { IStructure } from '@/components/FileViewer.tsx';
-import { getApiUrl } from '@/utils/getApiUrl.ts';
+import type { IStructure } from '@/components/FileViewer';
+import { getApiUrl } from '@/utils/getApiUrl';
 
 interface IFetchGitHubFilesParams {
   publicRepoURL: string;

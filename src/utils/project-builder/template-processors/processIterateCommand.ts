@@ -1,8 +1,8 @@
-import type { IFolder, IStructure } from '@/components/FileViewer.tsx';
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import { changeCase } from '@/utils/common.ts';
-import type { ISchemaInfoResult } from '@/utils/getSchemaInfo.ts';
-import type { IFormStore } from '@/useFormStore.ts';
+import type { IFolder, IStructure } from '@/components/FileViewer';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import { changeCase } from '@/utils/common';
+import type { ISchemaInfoResult } from '@/utils/getSchemaInfo';
+import type { IFormStore } from '@/useFormStore';
 import {
   LOOP_COMMAND_REGEX,
   LOOP_TABLES_REGEX,
@@ -16,16 +16,16 @@ import {
   USE_CONSTANT_REGEX,
   FOLDER_PATH_REGEX,
   RECURSIVE_WILDCARD_REGEX,
-} from '@/utils/project-builder/constants/templateActions.ts';
-import { getReplacementsForTable } from '@/utils/project-builder/template-processors/getReplacementsForTable.ts';
-import { loadConstant } from '@/utils/project-builder/template-processors/loadConstant.ts';
-import { processColumnsInfoIteration } from '@/utils/project-builder/template-processors/processColumnsInfoIteration.ts';
-import { processFileBasedTemplate } from '@/utils/project-builder/template-processors/fileBased.ts';
+} from '@/utils/project-builder/constants/templateActions';
+import { getReplacementsForTable } from '@/utils/project-builder/template-processors/getReplacementsForTable';
+import { loadConstant } from '@/utils/project-builder/template-processors/loadConstant';
+import { processColumnsInfoIteration } from '@/utils/project-builder/template-processors/processColumnsInfoIteration';
+import { processFileBasedTemplate } from '@/utils/project-builder/template-processors/fileBased';
 import {
   findFoldersWithWildcard,
   buildFolderPath,
-} from '@/utils/project-builder/template-processors/processRecursiveWildcard.ts';
-import { replacePlaceholders } from '@/utils/project-builder/utils/replacePlaceholders.ts';
+} from '@/utils/project-builder/template-processors/processRecursiveWildcard';
+import { replacePlaceholders } from '@/utils/project-builder/utils/replacePlaceholders';
 import { parse } from 'yaml';
 
 /**

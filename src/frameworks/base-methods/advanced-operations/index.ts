@@ -1,13 +1,13 @@
-import type { IMethod } from '@/interfaces/IRepositoryPatternStructure.ts';
-import getWithRelations from './getWithRelations/laravel.ts';
-import pluck from './pluck/laravel.ts';
-import firstOrCreate from './firstOrCreate/laravel.ts';
-import firstOrNew from './firstOrNew/laravel.ts';
-import chunk from './chunk/laravel.ts';
-import each from './each/laravel.ts';
-import whereIn from './whereIn/laravel.ts';
-import whereNotIn from './whereNotIn/laravel.ts';
-import whereBetween from './whereBetween/laravel.ts';
+import type { IMethod } from '@/interfaces/IRepositoryPatternStructure';
+import getWithRelations from './getWithRelations/laravel';
+import pluck from './pluck/laravel';
+import firstOrCreate from './firstOrCreate/laravel';
+import firstOrNew from './firstOrNew/laravel';
+import chunk from './chunk/laravel';
+import each from './each/laravel';
+import whereIn from './whereIn/laravel';
+import whereNotIn from './whereNotIn/laravel';
+import whereBetween from './whereBetween/laravel';
 
 export default [
   getWithRelations,

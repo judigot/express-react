@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import DatatypeParser from '@/utils/DataTypeParser.ts';
+import DatatypeParser from '@/utils/DataTypeParser';
 import { prisma } from '@/prisma/DatabaseClient';
-import { {{tableNamePascalCase}} } from '@/Controllers/{{tableNamePascalCase}}Controller.ts';
+import { {{tableNamePascalCase}} } from '@/Controllers/{{tableNamePascalCase}}Controller';
 import { Prisma } from '@prisma/client';
 
 type Body = Prisma.{{tableName}}CreateInput

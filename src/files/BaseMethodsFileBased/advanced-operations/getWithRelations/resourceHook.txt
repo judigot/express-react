@@ -1,6 +1,6 @@
 import { useQuery, type UseQueryOptions } from '@tanstack/react-query';
-import { getWithRelationsResources } from '@/hooks/shared/useGetWithRelations.ts';
-import { type I{{tableNamePascalCaseSingular}} } from '@/interfaces/I{{tableNamePascalCaseSingular}}.ts';
+import { getWithRelationsResources } from '@/hooks/shared/useGetWithRelations';
+import { type I{{tableNamePascalCaseSingular}} } from '@/interfaces/I{{tableNamePascalCaseSingular}}';
 
 interface IGetWithRelationsParams {
   relations: string[];

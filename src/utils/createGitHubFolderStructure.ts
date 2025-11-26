@@ -1,4 +1,4 @@
-import type { IStructure } from '@/components/FileViewer.tsx';
+import type { IStructure } from '@/components/FileViewer';
 import { Octokit } from '@octokit/rest';
 import pLimit from 'p-limit';
 

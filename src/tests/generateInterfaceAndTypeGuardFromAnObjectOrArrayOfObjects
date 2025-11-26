@@ -1,4 +1,4 @@
-import { generateInterfaceAndTypeGuardFromAnObjectOrArrayOfObjects } from '@/utils/_interfaceGenerator.ts';
+import { generateInterfaceAndTypeGuardFromAnObjectOrArrayOfObjects } from '@/utils/_interfaceGenerator';
 import { describe, it, expect } from 'vitest';
 
 const normalizeCodeString = (code: string): string => {

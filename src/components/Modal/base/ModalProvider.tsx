@@ -1,5 +1,5 @@
-import { useModalStore } from '@/components/Modal/base/modalStore.tsx';
-import CustomModal from '@/components/Modal/base/CustomModal.tsx';
+import { useModalStore } from '@/components/Modal/base/modalStore';
+import CustomModal from '@/components/Modal/base/CustomModal';
 
 function ModalProvider() {
   const { modals, closeModal } = useModalStore();

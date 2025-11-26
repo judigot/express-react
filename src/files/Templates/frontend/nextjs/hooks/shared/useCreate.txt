@@ -1,4 +1,4 @@
-import { axiosInstance } from '@/vendor/axiosInstance.ts';
+import { axiosInstance } from '@/vendor/axiosInstance';
 
 /**
  * Creates a resource by sending data to the API

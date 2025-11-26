@@ -1,7 +1,7 @@
-import { axiosInstance } from '@/vendor/axiosInstance.ts';
-import { handleError } from './handleError.ts';
-import { checkPermission } from '@/hooks/shared/useValidation.ts';
-import { createAuditLog } from '@/hooks/shared/useAudit.ts';
+import { axiosInstance } from '@/vendor/axiosInstance';
+import { handleError } from './handleError';
+import { checkPermission } from '@/hooks/shared/useValidation';
+import { createAuditLog } from '@/hooks/shared/useAudit';
 
 /**
  * Exports data in various formats (CSV, Excel, JSON, PDF)

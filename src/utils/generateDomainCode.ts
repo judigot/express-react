@@ -1,11 +1,11 @@
-import { replacePlaceholder } from '@/helpers/stringHelper.ts';
-import { changeCase } from '@/utils/common.ts';
-import domainStructure from '@/frameworks/backend/laravel/domain-methods/DomainMethods.ts';
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import type { IMethod } from '@/interfaces/IRepositoryPatternStructure.ts';
-import type { TableReplacements } from '@/interfaces/placeholders.ts';
-import type { RelationshipTypes } from '@/interfaces/IRelationshipTypes.ts';
-import type { IDomainStatus } from '@/interfaces/IDomainStatus.ts';
+import { replacePlaceholder } from '@/helpers/stringHelper';
+import { changeCase } from '@/utils/common';
+import domainStructure from '@/frameworks/backend/laravel/domain-methods/DomainMethods';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import type { IMethod } from '@/interfaces/IRepositoryPatternStructure';
+import type { TableReplacements } from '@/interfaces/placeholders';
+import type { RelationshipTypes } from '@/interfaces/IRelationshipTypes';
+import type { IDomainStatus } from '@/interfaces/IDomainStatus';
 
 interface IGeneratedMethod {
   methodName: string;

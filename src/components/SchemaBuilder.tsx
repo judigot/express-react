@@ -4,22 +4,22 @@ import type {
   ITableInfo,
   IColumnInfo,
   ISchemaInfo,
-} from '@/interfaces/interfaces.ts';
+} from '@/interfaces/interfaces';
 import {
   addRelationship,
   purgeForeignKeyTraces,
-} from '@/helpers/relationshipHelper.ts';
-import { useModalStore } from '@/components/Modal/base/modalStore.tsx';
+} from '@/helpers/relationshipHelper';
+import { useModalStore } from '@/components/Modal/base/modalStore';
 import { Edit as EditIcon, Close as CloseIcon } from '@mui/icons-material';
-import { getColumnDefaultDisplay, getPrimaryKey } from '@/utils/common.ts';
-import TableAdder from '@/components/TableAdder.tsx';
-import renameTable from '@/utils/renameTable.ts';
-import useTransformationsStore from '@/useTransformationsStore.ts';
+import { getColumnDefaultDisplay, getPrimaryKey } from '@/utils/common';
+import TableAdder from '@/components/TableAdder';
+import renameTable from '@/utils/renameTable';
+import useTransformationsStore from '@/useTransformationsStore';
 import yaml from 'yaml';
-import DataTypeSelector from '@/components/DataTypeSelector.tsx';
-import useDebouncedValue from '@/hooks/useDebouncedValue.ts';
-import { useMockDatabaseStore } from '@/useMockDatabaseStore.ts';
-import { useFormStore } from '@/useFormStore.ts';
+import DataTypeSelector from '@/components/DataTypeSelector';
+import useDebouncedValue from '@/hooks/useDebouncedValue';
+import { useMockDatabaseStore } from '@/useMockDatabaseStore';
+import { useFormStore } from '@/useFormStore';
 
 interface INewColumnFormData {
   columnName: string;

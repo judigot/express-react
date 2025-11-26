@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { mergeCoreFilesWithScaffolded } from './mergeCoreFiles.ts';
-import type { IStructure } from '@/components/FileViewer.tsx';
+import { mergeCoreFilesWithScaffolded } from './mergeCoreFiles';
+import type { IStructure } from '@/components/FileViewer';
 
 describe('mergeCoreFilesWithScaffolded', () => {
   it('should merge core and scaffolded files with no conflicts', () => {

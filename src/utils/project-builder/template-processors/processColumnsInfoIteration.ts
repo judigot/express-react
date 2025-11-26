@@ -1,10 +1,10 @@
-import type { IStructure } from '@/components/FileViewer.tsx';
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import { changeCase } from '@/utils/common.ts';
-import type { ISchemaInfoResult } from '@/utils/getSchemaInfo.ts';
-import { getReplacementsForTable } from '@/utils/project-builder/template-processors/getReplacementsForTable.ts';
-import { replacePlaceholders } from '@/utils/project-builder/utils/replacePlaceholders.ts';
-import type { IFormStore } from '@/useFormStore.ts';
+import type { IStructure } from '@/components/FileViewer';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import { changeCase } from '@/utils/common';
+import type { ISchemaInfoResult } from '@/utils/getSchemaInfo';
+import { getReplacementsForTable } from '@/utils/project-builder/template-processors/getReplacementsForTable';
+import { replacePlaceholders } from '@/utils/project-builder/utils/replacePlaceholders';
+import type { IFormStore } from '@/useFormStore';
 
 export const processColumnsInfoIteration = (
   tableObj: ISchemaInfo,

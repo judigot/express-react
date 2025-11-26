@@ -1,5 +1,5 @@
-import ModalProvider from '@/components/Modal/base/ModalProvider.tsx';
-import { useModalStore } from '@/components/Modal/base/modalStore.tsx';
+import ModalProvider from '@/components/Modal/base/ModalProvider';
+import { useModalStore } from '@/components/Modal/base/modalStore';
 
 function ModalViewer() {
   const { promptModal } = useModalStore();

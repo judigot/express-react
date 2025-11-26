@@ -1,11 +1,11 @@
-import type { IMethod } from '@/interfaces/IRepositoryPatternStructure.ts';
-import findOrFail from './findOrFail/index.ts';
-import findMany from './findMany/index.ts';
-import random from './random/index.ts';
-import latest from './latest/index.ts';
-import oldest from './oldest/index.ts';
-import orderBy from './orderBy/index.ts';
-import groupBy from './groupBy/index.ts';
+import type { IMethod } from '@/interfaces/IRepositoryPatternStructure';
+import findOrFail from './findOrFail/';
+import findMany from './findMany/';
+import random from './random/';
+import latest from './latest/';
+import oldest from './oldest/';
+import orderBy from './orderBy/';
+import groupBy from './groupBy/';
 
 export default [
   findOrFail,

@@ -1,5 +1,5 @@
-import { axiosInstance } from '@/vendor/axiosInstance.ts';
-import { handleError } from './handleError.ts';
+import { axiosInstance } from '@/vendor/axiosInstance';
+import { handleError } from './handleError';
 
 /**
  * Search records

@@ -1,5 +1,5 @@
-import type { IMethod } from '@/interfaces/IRepositoryPatternStructure.ts';
-import batchUpdate from './batchUpdate/index.ts';
-import updateOrCreate from './updateOrCreate/index.ts';
+import type { IMethod } from '@/interfaces/IRepositoryPatternStructure';
+import batchUpdate from './batchUpdate/';
+import updateOrCreate from './updateOrCreate/';
 
 export default [batchUpdate, updateOrCreate] satisfies IMethod[];

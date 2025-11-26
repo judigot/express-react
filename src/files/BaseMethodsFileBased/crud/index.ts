@@ -1,8 +1,8 @@
-import type { IMethod } from '@/interfaces/IRepositoryPatternStructure.ts';
-import index from './index/index.ts';
-import findById from './findById/index.ts';
-import create from './create/index.ts';
-import update from './update/index.ts';
-import destroy from './destroy/index.ts';
+import type { IMethod } from '@/interfaces/IRepositoryPatternStructure';
+import index from './index/';
+import findById from './findById/';
+import create from './create/';
+import update from './update/';
+import destroy from './destroy/';
 
 export default [index, findById, create, update, destroy] satisfies IMethod[];

@@ -1,8 +1,8 @@
-import generateSQLDeleteTables from '@/utils/generateSQLDeleteTables.ts';
+import generateSQLDeleteTables from '@/utils/generateSQLDeleteTables';
 import { describe, it, expect } from 'vitest';
-import manyToMany from '@/schema-infos/manyToMany.ts';
-import oneToMany from '@/schema-infos/oneToMany.ts';
-import oneToOne from '@/schema-infos/oneToOne.ts';
+import manyToMany from '@/schema-infos/manyToMany';
+import oneToMany from '@/schema-infos/oneToMany';
+import oneToOne from '@/schema-infos/oneToOne';
 
 describe('generateSQLDeleteTables', () => {
   const userPostOneToOneSchemaInfo = oneToOne;

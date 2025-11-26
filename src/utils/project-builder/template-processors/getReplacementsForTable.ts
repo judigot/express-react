@@ -1,7 +1,7 @@
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import { changeCase } from '@/utils/common.ts';
-import type { ISchemaInfoResult } from '@/utils/getSchemaInfo.ts';
-import type { Replacements } from '@/utils/project-builder/interfaces/interfaces.ts';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import { changeCase } from '@/utils/common';
+import type { ISchemaInfoResult } from '@/utils/getSchemaInfo';
+import type { Replacements } from '@/utils/project-builder/interfaces/interfaces';
 
 /**
  * Creates a helper function to support dynamic separators

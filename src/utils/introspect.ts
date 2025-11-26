@@ -1,11 +1,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { extractDBConnectionInfo } from '@/utils/extractDBConnectionInfo.ts';
-import { executeMySQL } from '@/utils/executeMySQL.ts';
-import { executePostgreSQL } from '@/utils/executePostgreSQL.ts';
+import { extractDBConnectionInfo } from '@/utils/extractDBConnectionInfo';
+import { executeMySQL } from '@/utils/executeMySQL';
+import { executePostgreSQL } from '@/utils/executePostgreSQL';
 import process from 'node:process';
-import type { DBTypes } from '@/interfaces/interfaces.ts';
-import { IGNORED_TABLES_LARAVEL } from '@/constants.ts';
+import type { DBTypes } from '@/interfaces/interfaces';
+import { IGNORED_TABLES_LARAVEL } from '@/constants';
 
 const platform: string = process.platform;
 let __dirname = path.dirname(decodeURI(new URL(import.meta.url).pathname));

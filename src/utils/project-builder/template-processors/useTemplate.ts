@@ -1,14 +1,14 @@
-import type { IStructure } from '@/components/FileViewer.tsx';
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import type { ISchemaInfoResult } from '@/utils/getSchemaInfo.ts';
-import { loadTemplateContent } from '@/utils/project-builder/utils/loadTemplateContent.ts';
-import { processCommand } from '@/utils/project-builder/template-processors/processCommand.ts';
-import { USE_TEMPLATE_REGEX } from '@/utils/project-builder/constants/templateActions.ts';
+import type { IStructure } from '@/components/FileViewer';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import type { ISchemaInfoResult } from '@/utils/getSchemaInfo';
+import { loadTemplateContent } from '@/utils/project-builder/utils/loadTemplateContent';
+import { processCommand } from '@/utils/project-builder/template-processors/processCommand';
+import { USE_TEMPLATE_REGEX } from '@/utils/project-builder/constants/templateActions';
 import {
   isPathRelative,
   getProjectDirectory,
-} from '@/utils/project-builder/utils/processRelativePath.ts';
-import type { IFormStore } from '@/useFormStore.ts';
+} from '@/utils/project-builder/utils/processRelativePath';
+import type { IFormStore } from '@/useFormStore';
 
 /**
  * This command allows including the content of another template file, supporting both

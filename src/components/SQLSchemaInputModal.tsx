@@ -1,8 +1,8 @@
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import { useFormStore } from '@/useFormStore.ts';
-import { useModalStore } from '@/useModalStore.ts';
-import useTransformationsStore from '@/useTransformationsStore.ts';
-import { getApiUrl } from '@/utils/getApiUrl.ts';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import { useFormStore } from '@/useFormStore';
+import { useModalStore } from '@/useModalStore';
+import useTransformationsStore from '@/useTransformationsStore';
+import { getApiUrl } from '@/utils/getApiUrl';
 import { type FormEvent, useEffect, useState } from 'react';
 
 interface IForm {

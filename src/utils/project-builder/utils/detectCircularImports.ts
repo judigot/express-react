@@ -1,9 +1,9 @@
-import type { IStructure } from '@/components/FileViewer.tsx';
-import { findFileInStructure } from '@/utils/project-builder/utils/findFileInStructure.ts';
+import type { IStructure } from '@/components/FileViewer';
+import { findFileInStructure } from '@/utils/project-builder/utils/findFileInStructure';
 import {
   IMPORT_PROJECT_REGEX,
   PROJECT_ACTIONS,
-} from '@/utils/project-builder/constants/projectActions.ts';
+} from '@/utils/project-builder/constants/projectActions';
 import { parse } from 'yaml';
 
 interface ICircularImportResult {

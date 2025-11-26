@@ -1,6 +1,6 @@
 import { Router, type Request, type Response } from 'express';
-import { executeCustomSchemaService } from '@/services/executeCustomSchemaService.ts';
-import type { IExecuteCustomSchemaRequest } from '@/interfaces/IExecuteCustomSchemaRequest.ts';
+import { executeCustomSchemaService } from '@/services/executeCustomSchemaService';
+import type { IExecuteCustomSchemaRequest } from '@/interfaces/IExecuteCustomSchemaRequest';
 
 const router = Router();
 

@@ -1,10 +1,10 @@
-import { APP_SETTINGS } from '@/constants.ts';
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import { changeCase, getPrimaryKey } from '@/utils/common.ts';
-import type { IFile } from '@/components/FileViewer.tsx';
-import { createFile } from '@/helpers/stringHelper.ts';
-import generateDomainCode from '@/utils/generateDomainCode.ts';
-import modelStructure from '@/frameworks/backend/laravel/_modelStructure.ts';
+import { APP_SETTINGS } from '@/constants';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import { changeCase, getPrimaryKey } from '@/utils/common';
+import type { IFile } from '@/components/FileViewer';
+import { createFile } from '@/helpers/stringHelper';
+import generateDomainCode from '@/utils/generateDomainCode';
+import modelStructure from '@/frameworks/backend/laravel/_modelStructure';
 
 // Columns excluded from API GET responses to protect sensitive data or internal fields
 export const hiddenFields = [

@@ -1,7 +1,7 @@
-import { axiosInstance } from '@/vendor/axiosInstance.ts';
-import { handleError } from './handleError.ts';
-import { validateAndSanitize, checkPermission } from '@/hooks/shared/useValidation.ts';
-import { createAuditLog } from '@/hooks/shared/useAudit.ts';
+import { axiosInstance } from '@/vendor/axiosInstance';
+import { handleError } from './handleError';
+import { validateAndSanitize, checkPermission } from '@/hooks/shared/useValidation';
+import { createAuditLog } from '@/hooks/shared/useAudit';
 
 /**
  * Creates multiple resources in a single transaction with enterprise-grade features

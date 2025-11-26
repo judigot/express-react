@@ -5,24 +5,24 @@ import {
   type PersistOptions,
 } from 'zustand/middleware';
 import { format as formatSQL } from 'sql-formatter';
-import generateMockData from '@/utils/generateMockData.ts';
-import generateSQLInserts from '@/utils/generateSQLInserts.ts';
-import generateSQLHasOneJoins from '@/utils/generateSQLHasOneJoins.ts';
-import generateSQLAggregateJoins from '@/utils/generateSQLAggregateJoins.ts';
-import generateSQLDeleteTables from '@/utils/generateSQLDeleteTables.ts';
-import { useFormStore } from '@/useFormStore.ts';
-import generateTypescriptInterfaces from '@/utils/generateTypescriptInterfaces.ts';
-import type { ISchemaInfo, ParsedJSONSchema } from '@/interfaces/interfaces.ts';
-import generateSQLSchema from '@/utils/generateSQLSchema.ts';
-import generateSQLDirectJoins from '@/utils/generateSQLDirectJoins.ts';
-import { createTabSync } from '@/utils/createTabSync.ts';
-import masterSchema from '@/schema-infos/masterSchema.ts';
-import type { IStructure } from '@/components/FileViewer.tsx';
-import { buildProjectFiles } from '@/utils/project-builder/buildProjectFiles.ts';
-import { useMockDatabaseStore } from '@/useMockDatabaseStore.ts';
-import { useProjectStore } from '@/useProjectStore.ts';
-import { sortTablesBasedOnHierarchy } from '@/utils/sortTablesBasedOnHierarchy.ts';
-import { MAX_MOCK_DATA_ROWS } from '@/constants.ts';
+import generateMockData from '@/utils/generateMockData';
+import generateSQLInserts from '@/utils/generateSQLInserts';
+import generateSQLHasOneJoins from '@/utils/generateSQLHasOneJoins';
+import generateSQLAggregateJoins from '@/utils/generateSQLAggregateJoins';
+import generateSQLDeleteTables from '@/utils/generateSQLDeleteTables';
+import { useFormStore } from '@/useFormStore';
+import generateTypescriptInterfaces from '@/utils/generateTypescriptInterfaces';
+import type { ISchemaInfo, ParsedJSONSchema } from '@/interfaces/interfaces';
+import generateSQLSchema from '@/utils/generateSQLSchema';
+import generateSQLDirectJoins from '@/utils/generateSQLDirectJoins';
+import { createTabSync } from '@/utils/createTabSync';
+import masterSchema from '@/schema-infos/masterSchema';
+import type { IStructure } from '@/components/FileViewer';
+import { buildProjectFiles } from '@/utils/project-builder/buildProjectFiles';
+import { useMockDatabaseStore } from '@/useMockDatabaseStore';
+import { useProjectStore } from '@/useProjectStore';
+import { sortTablesBasedOnHierarchy } from '@/utils/sortTablesBasedOnHierarchy';
+import { MAX_MOCK_DATA_ROWS } from '@/constants';
 
 interface ITransformations extends Record<PropertyKey, unknown> {
   schemaInfo: ISchemaInfo[];

@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { QueryClient, HydrationBoundary, dehydrate } from '@tanstack/react-query';
-import { {{tableNameCamelCaseSingular}}Keys } from '@/hooks/{{tableNameKebabCaseSingular}}/use{{tableNamePascalCaseSingular}}.ts';
-import {{tableNamePascalCaseSingular}}Component from './{{tableNamePascalCaseSingular}}Component.tsx';
-import { api } from '@/hooks/{{tableNameKebabCaseSingular}}/api.ts';
+import { {{tableNameCamelCaseSingular}}Keys } from '@/hooks/{{tableNameKebabCaseSingular}}/use{{tableNamePascalCaseSingular}}';
+import {{tableNamePascalCaseSingular}}Component from './{{tableNamePascalCaseSingular}}Component';
+import { api } from '@/hooks/{{tableNameKebabCaseSingular}}/api';
 
 export async function generate{{tableNamePascalCaseSingular}}StaticProps() {
   const queryClient = new QueryClient();

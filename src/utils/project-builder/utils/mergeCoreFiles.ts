@@ -1,4 +1,4 @@
-import type { IStructure, IFolder } from '@/components/FileViewer.tsx';
+import type { IStructure, IFolder } from '@/components/FileViewer';
 
 /**
  * Merges core files with scaffolded files using smart conflict resolution:

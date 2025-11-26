@@ -1,8 +1,8 @@
-import { executePostgreSQL } from '@/utils/executePostgreSQL.ts';
-import { executeMySQL } from '@/utils/executeMySQL.ts';
-import { extractDBConnectionInfo } from '@/utils/extractDBConnectionInfo.ts';
-import type { DBTypes } from '@/interfaces/interfaces.ts';
-import { IGNORED_TABLES_LARAVEL } from '@/constants.ts';
+import { executePostgreSQL } from '@/utils/executePostgreSQL';
+import { executeMySQL } from '@/utils/executeMySQL';
+import { extractDBConnectionInfo } from '@/utils/extractDBConnectionInfo';
+import type { DBTypes } from '@/interfaces/interfaces';
+import { IGNORED_TABLES_LARAVEL } from '@/constants';
 
 interface IDatabaseInfo {
   name: string;

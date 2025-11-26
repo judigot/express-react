@@ -1,5 +1,5 @@
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import { isSchemaInfoAlreadySorted } from '@/utils/isSchemaInfoAlreadySorted.ts';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import { isSchemaInfoAlreadySorted } from '@/utils/isSchemaInfoAlreadySorted';
 
 /*
   Sort tables topologically, so that parent tables appear before child tables.

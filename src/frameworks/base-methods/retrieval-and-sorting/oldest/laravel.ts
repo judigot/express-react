@@ -1,4 +1,4 @@
-import type { IMethod } from '@/interfaces/IRepositoryPatternStructure.ts';
+import type { IMethod } from '@/interfaces/IRepositoryPatternStructure';
 
 export default {
   methodName: 'oldest',

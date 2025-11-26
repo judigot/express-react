@@ -1,15 +1,15 @@
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import { loadConstant } from '@/utils/project-builder/template-processors/loadConstant.ts';
-import type { ISchemaInfoResult } from '@/utils/getSchemaInfo.ts';
-import type { IStructure } from '@/components/FileViewer.tsx';
-import { processIterateCommand } from '@/utils/project-builder/template-processors/processIterateCommand.ts';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import { loadConstant } from '@/utils/project-builder/template-processors/loadConstant';
+import type { ISchemaInfoResult } from '@/utils/getSchemaInfo';
+import type { IStructure } from '@/components/FileViewer';
+import { processIterateCommand } from '@/utils/project-builder/template-processors/processIterateCommand';
 import {
   TEMPLATE_ACTIONS,
   USE_FORM_DATA_REGEX,
   USE_USER_ENV_REGEX,
-} from '@/utils/project-builder/constants/templateActions.ts';
-import { processUseTemplate } from '@/utils/project-builder/template-processors/useTemplate.ts';
-import type { IFormStore } from '@/useFormStore.ts';
+} from '@/utils/project-builder/constants/templateActions';
+import { processUseTemplate } from '@/utils/project-builder/template-processors/useTemplate';
+import type { IFormStore } from '@/useFormStore';
 
 /**
  * Helper function to check if a string has content

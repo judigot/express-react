@@ -1,16 +1,16 @@
 import { Router } from 'express';
-import executeCustomSchemaRouter from './executeCustomSchema.ts';
-import scaffoldRouter from './scaffold.ts';
-import introspectRouter from './introspect.ts';
-import userFilesRouter from './getUserFiles.ts';
-import getUserFilesFromPublicRepoRouter from './getUserFilesFromPublicRepo.ts';
-import createLocalFilesRouter from './createLocalFiles.ts';
-import createGitHubFileRouter from './createGitHubFile.ts';
-import createGitHubRepositoryRouter from './createGitHubRepository.ts';
-import createGitHubFolderStructureRouter from './createGitHubFolderStructure.ts';
-import githubTokenRouter from './githubToken.ts';
-import userMetadataRouter from './userMetadata.ts';
-import helloRouter from './hello.ts';
+import executeCustomSchemaRouter from './executeCustomSchema';
+import scaffoldRouter from './scaffold';
+import introspectRouter from './introspect';
+import userFilesRouter from './getUserFiles';
+import getUserFilesFromPublicRepoRouter from './getUserFilesFromPublicRepo';
+import createLocalFilesRouter from './createLocalFiles';
+import createGitHubFileRouter from './createGitHubFile';
+import createGitHubRepositoryRouter from './createGitHubRepository';
+import createGitHubFolderStructureRouter from './createGitHubFolderStructure';
+import githubTokenRouter from './githubToken';
+import userMetadataRouter from './userMetadata';
+import helloRouter from './hello';
 const router = Router();
 
 router.use(helloRouter);

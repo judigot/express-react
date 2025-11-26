@@ -2,15 +2,15 @@ import type {
   IColumnInfo,
   ISchemaInfo,
   ParsedJSONSchema,
-} from '@/interfaces/interfaces.ts';
-import convertType from '@/utils/convertType.ts';
-import identifyTSPrimitiveType from '@/utils/identifyTSPrimitiveType.ts';
+} from '@/interfaces/interfaces';
+import convertType from '@/utils/convertType';
+import identifyTSPrimitiveType from '@/utils/identifyTSPrimitiveType';
 import {
   getForeignKeys,
   getForeignTables,
   getRequiredColumns,
-} from '@/utils/convertIntrospectedStructure.ts';
-import { sortTablesBasedOnHierarchy } from '@/utils/sortTablesBasedOnHierarchy.ts';
+} from '@/utils/convertIntrospectedStructure';
+import { sortTablesBasedOnHierarchy } from '@/utils/sortTablesBasedOnHierarchy';
 
 /* Relationship Rules:
 

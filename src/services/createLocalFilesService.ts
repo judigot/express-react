@@ -1,19 +1,19 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
 import path from 'node:path';
 import fs from 'node:fs';
-import type { IStructure } from '@/components/FileViewer.tsx';
-import { buildProjectFiles } from '@/utils/project-builder/buildProjectFiles.ts';
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import { createFolderStructure } from '@/utils/createFolderStructure.ts';
-import { createOrResetDatabase } from '@/utils/databaseOperations.ts';
-import generateSQLSchema from '@/utils/generateSQLSchema.ts';
-import generateSQLDeleteTables from '@/utils/generateSQLDeleteTables.ts';
+import type { IStructure } from '@/components/FileViewer';
+import { buildProjectFiles } from '@/utils/project-builder/buildProjectFiles';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import { createFolderStructure } from '@/utils/createFolderStructure';
+import { createOrResetDatabase } from '@/utils/databaseOperations';
+import generateSQLSchema from '@/utils/generateSQLSchema';
+import generateSQLDeleteTables from '@/utils/generateSQLDeleteTables';
 import { format as formatSQL } from 'sql-formatter';
-import generateSQLInserts from '@/utils/generateSQLInserts.ts';
-import generateMockData from '@/utils/generateMockData.ts';
-import type { IFormStore } from '@/useFormStore.ts';
-import { isUsingLocalFiles } from '@/hooks/useUserFiles.ts';
-import { getApiUrl } from '@/utils/getApiUrl.ts';
+import generateSQLInserts from '@/utils/generateSQLInserts';
+import generateMockData from '@/utils/generateMockData';
+import type { IFormStore } from '@/useFormStore';
+import { isUsingLocalFiles } from '@/hooks/useUserFiles';
+import { getApiUrl } from '@/utils/getApiUrl';
 
 interface ICreateLocalFilesRequest {
   schemaInfo: ISchemaInfo[];

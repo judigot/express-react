@@ -1,8 +1,8 @@
-import generateSQLAggregateJoins from '@/utils/generateSQLAggregateJoins.ts';
+import generateSQLAggregateJoins from '@/utils/generateSQLAggregateJoins';
 import { describe, it, expect } from 'vitest';
-import { normalizeWhitespace } from '@/helpers/stringHelper.ts';
-import manyToMany from '@/schema-infos/manyToMany.ts';
-import oneToMany from '@/schema-infos/oneToMany.ts';
+import { normalizeWhitespace } from '@/helpers/stringHelper';
+import manyToMany from '@/schema-infos/manyToMany';
+import oneToMany from '@/schema-infos/oneToMany';
 
 describe('generateSQLAggregateJoins', () => {
   const POSSchemaInfo = manyToMany;

@@ -1,6 +1,6 @@
 import { useQuery, type UseQueryOptions } from '@tanstack/react-query';
-import { firstOrNewResource } from '@/hooks/shared/useFirstOrNew.ts';
-import { type I{{tableNamePascalCaseSingular}} } from '@/interfaces/I{{tableNamePascalCaseSingular}}.ts';
+import { firstOrNewResource } from '@/hooks/shared/useFirstOrNew';
+import { type I{{tableNamePascalCaseSingular}} } from '@/interfaces/I{{tableNamePascalCaseSingular}}';
 
 interface IFirstOrNewParams {
   searchCriteria: Partial<I{{tableNamePascalCaseSingular}}>;

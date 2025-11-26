@@ -1,14 +1,14 @@
 import { describe, it, expect } from 'vitest';
-import { importProject } from './importProject.ts';
-import { processYamlStructure } from './processYamlStructure.ts';
-import type { IStructure, IFile, IFolder } from '@/components/FileViewer.tsx';
-import masterSchema from '@/schema-infos/masterSchema.ts';
-import { getSchemaInfo } from '@/utils/getSchemaInfo.ts';
-import { findFileInStructure } from '@/utils/project-builder/utils/findFileInStructure.ts';
-import { loadTemplateContent } from '@/utils/project-builder/utils/loadTemplateContent.ts';
-import type { IFormStore } from '@/useFormStore.ts';
-import { frameworks } from '@/useFormStore.ts';
-import { CREATION_MODES } from '@/constants.ts';
+import { importProject } from './importProject';
+import { processYamlStructure } from './processYamlStructure';
+import type { IStructure, IFile, IFolder } from '@/components/FileViewer';
+import masterSchema from '@/schema-infos/masterSchema';
+import { getSchemaInfo } from '@/utils/getSchemaInfo';
+import { findFileInStructure } from '@/utils/project-builder/utils/findFileInStructure';
+import { loadTemplateContent } from '@/utils/project-builder/utils/loadTemplateContent';
+import type { IFormStore } from '@/useFormStore';
+import { frameworks } from '@/useFormStore';
+import { CREATION_MODES } from '@/constants';
 
 const createMockFormData = (): IFormStore => ({
   schemaInput: {},

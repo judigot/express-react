@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import useTransformationsStore from '@/useTransformationsStore.ts';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import useTransformationsStore from '@/useTransformationsStore';
 
 interface ITableAdderProps {
   className?: string;

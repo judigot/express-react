@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-base-to-string */
 import { describe, it, expect } from 'vitest';
-import { useLaravel } from '@/frameworks/backend/laravel/useLaravel.ts';
-import { oneToOneExpectation } from '@/tests/folder-structure/laravel/one-to-one-expectation.ts';
-import { oneToManyExpectation } from '@/tests/folder-structure/laravel/one-to-many-expectation.ts';
-import { manyToManyExpectation } from '@/tests/folder-structure/laravel/many-to-many-expectation.ts';
-import { normalizeWhitespace } from '@/helpers/stringHelper.ts';
-import oneToOne from '@/schema-infos/oneToOne.ts';
-import oneToMany from '@/schema-infos/oneToMany.ts';
-import manyToMany from '@/schema-infos/manyToMany.ts';
+import { useLaravel } from '@/frameworks/backend/laravel/useLaravel';
+import { oneToOneExpectation } from '@/tests/folder-structure/laravel/one-to-one-expectation';
+import { oneToManyExpectation } from '@/tests/folder-structure/laravel/one-to-many-expectation';
+import { manyToManyExpectation } from '@/tests/folder-structure/laravel/many-to-many-expectation';
+import { normalizeWhitespace } from '@/helpers/stringHelper';
+import oneToOne from '@/schema-infos/oneToOne';
+import oneToMany from '@/schema-infos/oneToMany';
+import manyToMany from '@/schema-infos/manyToMany';
 
 describe('Laravel Folder Structure', () => {
   it('Should generate proper folder structure for one-to-one schema', () => {

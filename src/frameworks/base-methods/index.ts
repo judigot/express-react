@@ -1,10 +1,10 @@
-import type { IRepositoryStructure } from '@/interfaces/IRepositoryPatternStructure.ts';
-import CRUD from './crud/index.ts';
-import QueryAndSearch from './query-and-search/index.ts';
-import SoftDeletesAndRestoration from './soft-deletes-and-restoration/index.ts';
-import BulkOperations from './bulk-operations/index.ts';
-import RetrievalAndSorting from './retrieval-and-sorting/index.ts';
-import AdvancedOperations from './advanced-operations/index.ts';
+import type { IRepositoryStructure } from '@/interfaces/IRepositoryPatternStructure';
+import CRUD from './crud/';
+import QueryAndSearch from './query-and-search/';
+import SoftDeletesAndRestoration from './soft-deletes-and-restoration/';
+import BulkOperations from './bulk-operations/';
+import RetrievalAndSorting from './retrieval-and-sorting/';
+import AdvancedOperations from './advanced-operations/';
 
 export const baseMethods: IRepositoryStructure[] = [
   { group: 'CRUD', methods: CRUD },

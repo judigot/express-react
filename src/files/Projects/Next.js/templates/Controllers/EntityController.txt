@@ -1,5 +1,5 @@
 import { Prisma } from '@prisma/client';
-import { prisma } from '@/prisma/DatabaseClient.ts';
+import { prisma } from '@/prisma/DatabaseClient';
 import { {{tableName}} } from '@prisma/client';
 
 export const {{tableNamePascalCase}} = {

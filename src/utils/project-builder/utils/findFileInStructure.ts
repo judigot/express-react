@@ -1,4 +1,4 @@
-import type { IStructure, IFile, IFolder } from '@/components/FileViewer.tsx';
+import type { IStructure, IFile, IFolder } from '@/components/FileViewer';
 
 export const findFileInStructure = (
   path: string,

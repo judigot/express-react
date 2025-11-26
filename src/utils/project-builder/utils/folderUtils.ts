@@ -1,4 +1,4 @@
-import type { IFolder, IStructure } from '@/components/FileViewer.tsx';
+import type { IFolder, IStructure } from '@/components/FileViewer';
 
 /**
  * Check if a folder contains any YAML files

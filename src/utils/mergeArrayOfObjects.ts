@@ -3,7 +3,7 @@ import type {
   IBase,
   IFile,
   IFolder,
-} from '@/components/FileViewer.tsx';
+} from '@/components/FileViewer';
 
 export function mergeArrayOfObjects(
   structure1: IStructure,

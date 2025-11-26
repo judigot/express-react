@@ -1,9 +1,9 @@
-import type { IMethod } from '@/interfaces/IRepositoryPatternStructure.ts';
-import softDelete from './softDelete/laravel.ts';
-import restore from './restore/laravel.ts';
-import withTrashed from './withTrashed/laravel.ts';
-import onlyTrashed from './onlyTrashed/laravel.ts';
-import withoutTrashed from './withoutTrashed/laravel.ts';
+import type { IMethod } from '@/interfaces/IRepositoryPatternStructure';
+import softDelete from './softDelete/laravel';
+import restore from './restore/laravel';
+import withTrashed from './withTrashed/laravel';
+import onlyTrashed from './onlyTrashed/laravel';
+import withoutTrashed from './withoutTrashed/laravel';
 
 export default [
   softDelete,

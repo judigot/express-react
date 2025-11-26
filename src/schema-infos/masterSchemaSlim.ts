@@ -1,4 +1,4 @@
-import type { ISchemaInfoSlim } from '@/interfaces/interfaces.ts';
+import type { ISchemaInfoSlim } from '@/interfaces/interfaces';
 export default [
   {
     tableName: 'product',

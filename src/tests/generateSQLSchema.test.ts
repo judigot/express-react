@@ -1,15 +1,15 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import generateSQLDeleteTables from '@/utils/generateSQLDeleteTables.ts';
-import generateSQLSchema from '@/utils/generateSQLSchema.ts';
+import generateSQLDeleteTables from '@/utils/generateSQLDeleteTables';
+import generateSQLSchema from '@/utils/generateSQLSchema';
 import { format as formatSQL } from 'sql-formatter';
-import { APP_SETTINGS } from '@/constants.ts';
-import manyToMany from '@/schema-infos/manyToMany.ts';
-import oneToMany from '@/schema-infos/oneToMany.ts';
-import oneToOne from '@/schema-infos/oneToOne.ts';
+import { APP_SETTINGS } from '@/constants';
+import manyToMany from '@/schema-infos/manyToMany';
+import oneToMany from '@/schema-infos/oneToMany';
+import oneToOne from '@/schema-infos/oneToOne';
 import {
   setupTypeMappings,
   teardownTypeMappings,
-} from '@/tests/helpers/setupTypeMappings.ts';
+} from '@/tests/helpers/setupTypeMappings';
 
 describe('generateSQLSchema', () => {
   const userPostOneToOneSchemaInfo = oneToOne;

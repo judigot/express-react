@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient, type UseMutationOptions } from '@tanstack/react-query';
-import { createAuditLog } from '@/hooks/shared/useAudit.ts';
-import { type I{{tableNamePascalCaseSingular}} } from '@/interfaces/I{{tableNamePascalCaseSingular}}.ts';
+import { createAuditLog } from '@/hooks/shared/useAudit';
+import { type I{{tableNamePascalCaseSingular}} } from '@/interfaces/I{{tableNamePascalCaseSingular}}';
 
 interface IAuditLogData {
   action: 'create' | 'update' | 'delete' | 'view' | 'export';

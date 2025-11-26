@@ -1,11 +1,11 @@
-import type { IStructure } from '@/components/FileViewer.tsx';
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
-import createAPICalls from '@/frameworks/frontend/createAPICalls.ts';
-import createTypescriptInterfaces from '@/frameworks/frontend/createTypescriptInterfaces.ts';
-import createAxiosInstance from '@/frameworks/frontend/createAxiosInstance.ts';
-import createAxiosInterceptor from '@/frameworks/frontend/createAxiosInterceptor.ts';
-import createAPIHooks from '@/frameworks/frontend/createAPIHooks.ts';
-import createTypescriptInterfacesBarrelExport from '@/frameworks/frontend/createTypescriptInterfacesBarrelExport.ts';
+import type { IStructure } from '@/components/FileViewer';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
+import createAPICalls from '@/frameworks/frontend/createAPICalls';
+import createTypescriptInterfaces from '@/frameworks/frontend/createTypescriptInterfaces';
+import createAxiosInstance from '@/frameworks/frontend/createAxiosInstance';
+import createAxiosInterceptor from '@/frameworks/frontend/createAxiosInterceptor';
+import createAPIHooks from '@/frameworks/frontend/createAPIHooks';
+import createTypescriptInterfacesBarrelExport from '@/frameworks/frontend/createTypescriptInterfacesBarrelExport';
 
 export function useFrontend({
   schemaInfo,

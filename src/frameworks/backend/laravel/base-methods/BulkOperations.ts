@@ -1,4 +1,4 @@
-import type { IRepositoryStructure } from '@/interfaces/IRepositoryPatternStructure.ts';
+import type { IRepositoryStructure } from '@/interfaces/IRepositoryPatternStructure';
 
 export default {
   group: 'Bulk Operations',

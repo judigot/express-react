@@ -1,5 +1,5 @@
-import type { IConfig } from '@/interfaces/IConfig.ts';
-import { getApiUrl } from '@/utils/getApiUrl.ts';
+import type { IConfig } from '@/interfaces/IConfig';
+import { getApiUrl } from '@/utils/getApiUrl';
 
 export default {
   general: {

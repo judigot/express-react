@@ -1,5 +1,5 @@
-import type { IStructure } from '@/components/FileViewer.tsx';
-import type { ISchemaInfo } from '@/interfaces/interfaces.ts';
+import type { IStructure } from '@/components/FileViewer';
+import type { ISchemaInfo } from '@/interfaces/interfaces';
 
 const createTypescriptInterfacesBarrelExport = (
   schemaInfo: ISchemaInfo[],

@@ -1,7 +1,7 @@
 import type {
   Replacements,
   ReplacementValue,
-} from '@/utils/project-builder/interfaces/interfaces.ts';
+} from '@/utils/project-builder/interfaces/interfaces';
 
 /**
  * Recursively processes placeholders in a template by replacing them with values

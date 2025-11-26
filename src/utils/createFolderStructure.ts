@@ -1,4 +1,4 @@
-import type { IStructure } from '@/components/FileViewer.tsx';
+import type { IStructure } from '@/components/FileViewer';
 import fs from 'node:fs';
 import path from 'node:path';
 

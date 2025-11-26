@@ -1,4 +1,4 @@
-import type { IJSONSchema, DBTypes } from '@/interfaces/interfaces.ts';
+import type { IJSONSchema, DBTypes } from '@/interfaces/interfaces';
 
 export interface IExecuteCustomSchemaRequest {
   schema: IJSONSchema;

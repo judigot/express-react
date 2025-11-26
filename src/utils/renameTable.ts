@@ -1,4 +1,4 @@
-import type { ISchemaInfo, IColumnInfo } from '@/interfaces/interfaces.ts';
+import type { ISchemaInfo, IColumnInfo } from '@/interfaces/interfaces';
 
 function renameTable({
   oldTableName,

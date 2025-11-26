@@ -1,9 +1,9 @@
-import type { IMethod } from '@/interfaces/IRepositoryPatternStructure.ts';
-import findByAttributes from './findByAttributes/laravel.ts';
-import paginate from './paginate/laravel.ts';
-import search from './search/laravel.ts';
-import count from './count/laravel.ts';
-import exists from './exists/laravel.ts';
+import type { IMethod } from '@/interfaces/IRepositoryPatternStructure';
+import findByAttributes from './findByAttributes/laravel';
+import paginate from './paginate/laravel';
+import search from './search/laravel';
+import count from './count/laravel';
+import exists from './exists/laravel';
 
 export default [
   findByAttributes,

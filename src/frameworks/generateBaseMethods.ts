@@ -1,6 +1,6 @@
-import { methods } from '@/frameworks/backend/laravel/base-methods/index.ts';
-import type { IRepositoryStructure } from '@/interfaces/IRepositoryPatternStructure.ts';
-import { changeCase } from '@/utils/common.ts';
+import { methods } from '@/frameworks/backend/laravel/base-methods/';
+import type { IRepositoryStructure } from '@/interfaces/IRepositoryPatternStructure';
+import { changeCase } from '@/utils/common';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -19,14 +19,14 @@ if (fs.existsSync(outputDir)) {
 // Generate index.ts for a specific group directory
 const generateGroupIndexFile = (groupDir: string, methods: string[]) => {
   const imports = methods
-    .map((method) => `import ${method} from './${method}/index.ts';`)
+    .map((method) => `import ${method} from './${method}/';`)
     .join('\n');
 
   const exports = `export default [
 ${methods.map((method) => `  ${method},`).join('\n')}
 ] satisfies IMethod[];`;
 
-  const indexContent = `import { IMethod } from '@/interfaces/IRepositoryPatternStructure.ts';
+  const indexContent = `import { IMethod } from '@/interfaces/IRepositoryPatternStructure';
 ${imports}\n\n${exports}\n`;
   const indexPath = path.join(groupDir, 'index.ts');
   fs.writeFileSync(indexPath, indexContent, 'utf8');
@@ -80,7 +80,7 @@ const generateFeatureFiles = (operation: IRepositoryStructure[]) => {
       });
 
       // Create an index.ts file that loads all the txt files
-      const indexContent = `import { IMethod } from '@/interfaces/IRepositoryPatternStructure.ts';
+      const indexContent = `import { IMethod } from '@/interfaces/IRepositoryPatternStructure';
 import fs from 'fs';
 import path from 'path';
 
@@ -118,13 +118,13 @@ export default {
 // Generate `index.ts` that dynamically imports all method index files
 const generateIndexFile = (outputDir: string) => {
   // Generate the base methods array
-  const indexContent = `import { IRepositoryStructure } from '@/interfaces/IRepositoryPatternStructure.ts';
-import CRUD from './crud/index.ts';
-import QueryAndSearch from './query-and-search/index.ts';
-import SoftDeletesAndRestoration from './soft-deletes-and-restoration/index.ts';
-import BulkOperations from './bulk-operations/index.ts';
-import RetrievalAndSorting from './retrieval-and-sorting/index.ts';
-import AdvancedOperations from './advanced-operations/index.ts';
+  const indexContent = `import { IRepositoryStructure } from '@/interfaces/IRepositoryPatternStructure';
+import CRUD from './crud/';
+import QueryAndSearch from './query-and-search/';
+import SoftDeletesAndRestoration from './soft-deletes-and-restoration/';
+import BulkOperations from './bulk-operations/';
+import RetrievalAndSorting from './retrieval-and-sorting/';
+import AdvancedOperations from './advanced-operations/';
 
 export const baseMethods: IRepositoryStructure[] = [
   { group: 'CRUD', methods: CRUD },

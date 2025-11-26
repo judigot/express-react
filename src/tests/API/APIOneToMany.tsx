@@ -1,8 +1,8 @@
 import { describe, it, expect, beforeAll } from 'vitest';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import App from '@/App.tsx'; // Assuming your App component contains the buttons and checkbox
-import { usersPostsOneToManySchema } from '@/json-schemas/index.ts';
+import App from '@/App'; // Assuming your App component contains the buttons and checkbox
+import { usersPostsOneToManySchema } from '@/json-schemas/';
 
 const backendUrl = 'http://127.0.0.1:8000';
 

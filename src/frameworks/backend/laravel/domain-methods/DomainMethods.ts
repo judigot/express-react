@@ -1,4 +1,4 @@
-import type { IDomainStructure } from '@/interfaces/IRepositoryPatternStructure.ts';
+import type { IDomainStructure } from '@/interfaces/IRepositoryPatternStructure';
 
 export default {
   group: 'CRUD',
