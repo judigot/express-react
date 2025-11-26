@@ -4,7 +4,8 @@ function App() {
   const [message, setMessage] = useState<string>('Loading...');
 
   useEffect(() => {
-    fetch('/api')
+    // fetch('/api')
+    fetch('http://localhost:5000/api')
       .then((res) => res.json())
       .then((data: { message: string }) => {
         setMessage(data.message);
