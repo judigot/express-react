@@ -4,8 +4,7 @@ function App() {
   const [message, setMessage] = useState<string>('Loading...');
 
   useEffect(() => {
-    // fetch('/api')
-    fetch('http://localhost:5000/api')
+    fetch(`${String(import.meta.env.VITE_BACKEND_URL)}/api`)
       .then((res) => res.json())
       .then((data: { message: string }) => {
         setMessage(data.message);

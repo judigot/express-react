@@ -1,67 +1,82 @@
-import { fixupConfigRules, fixupPluginRules } from '@eslint/compat';
 import reactRefresh from 'eslint-plugin-react-refresh';
-import react from 'eslint-plugin-react';
-import typescriptEslint from '@typescript-eslint/eslint-plugin';
+import importPlugin from 'eslint-plugin-import';
 import reactHooks from 'eslint-plugin-react-hooks';
-import jsxA11Y from 'eslint-plugin-jsx-a11y';
-import noTypeAssertion from 'eslint-plugin-no-type-assertion';
 import globals from 'globals';
-import tsParser from '@typescript-eslint/parser';
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import js from '@eslint/js';
-import { FlatCompat } from '@eslint/eslintrc';
-import importPlugin from 'eslint-plugin-import';
+import tseslint from 'typescript-eslint';
+import noTypeAssertion from 'eslint-plugin-no-type-assertion';
+import react from 'eslint-plugin-react';
+
+import { defineConfig, globalIgnores } from 'eslint/config';
+
+import { createRequire } from 'node:module';
+const require = createRequire(import.meta.url);
+
+// prettier-ignore
+const isNextJs = (() => { try { const p = require(`${process.cwd()}/package.json`); return ( 'next' in (p.dependencies ?? {}) || 'next' in (p.devDependencies ?? {}) || [ 'next.config.js', 'next.config.mjs', 'next.config.ts', 'next.config.cjs', ].some((f) => require('fs').existsSync(f)) ); } catch { return false; } })();
+// prettier-ignore
+const nextConfigs = (() => { if (!isNextJs) return []; try { const nextVitals = require('eslint-config-next/core-web-vitals'); const nextTs = require('eslint-config-next/typescript'); return [...nextVitals, ...nextTs]; } catch { return []; } })();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-});
 
-export default [
+export default defineConfig([
+  globalIgnores([
+    // Default ignores of eslint-config-next:
+    '**/dist',
+    '**/eslint.config.js',
+    '**/vite.config.ts',
+    '**/vitest.config.ts',
+    '**/tailwind.config.js',
+    '**/postcss.config.js',
+    '**/vitest.setup.ts',
+    '**/docs',
+
+    '.next/**',
+    'out/**',
+    'build/**',
+    'coverage/**',
+    'next-env.d.ts',
+  ]),
   {
-    ignores: [
-      '**/dist',
-      '**/eslint.config.js', // Comment out for Next.js to prevent "The Next.js plugin was not detected in your ESLint configuration" error
-      '**/vite.config.ts',
-      '**/vitest.config.ts',
-      '**/tailwind.config.js',
-      '**/postcss.config.js',
-      '**/api'
-    ],
-  },
-  ...fixupConfigRules(
-    compat.extends(
-      'eslint:recommended',
-      'plugin:react-hooks/recommended',
-      'plugin:@typescript-eslint/strict-type-checked',
-      'plugin:@typescript-eslint/stylistic-type-checked',
-      'plugin:react/recommended',
-      'plugin:jsx-a11y/recommended',
-      // 'next/core-web-vitals', // Next.js
-      // 'next/typescript', // Next.js
-    ),
-  ),
-  {
+    files: ['**/*.{ts,tsx}'],
     plugins: {
-      'react-refresh': reactRefresh,
-      react: fixupPluginRules(react),
-      '@typescript-eslint': fixupPluginRules(typescriptEslint),
-      'react-hooks': fixupPluginRules(reactHooks),
-      'jsx-a11y': fixupPluginRules(jsxA11Y),
+      react,
       'no-type-assertion': noTypeAssertion,
-      import: importPlugin,
+      'react-hooks': reactHooks,
     },
+    extends: [
+      js.configs.recommended,
+      tseslint.configs.recommendedTypeChecked,
+      tseslint.configs.strictTypeChecked,
+      tseslint.configs.stylisticTypeChecked,
+      ...(() =>
+        isNextJs
+          ? [reactRefresh.configs.next]
+          : [
+              importPlugin.flatConfigs.recommended,
+              reactRefresh.configs.vite,
+            ])(),
+    ],
 
     languageOptions: {
       globals: {
         ...globals.browser,
+
+        describe: 'readonly',
+        it: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        test: 'readonly',
+        vi: 'readonly',
       },
 
-      parser: tsParser,
+      parser: tseslint.parser,
       ecmaVersion: 12,
       sourceType: 'module',
 
@@ -72,8 +87,12 @@ export default [
 
         project: [
           './tsconfig.json',
-          './tsconfig.app.json', // Comment out for Next.js
-          './tsconfig.node.json', // Comment out for Next.js
+          ...(() => {
+            if (!isNextJs) {
+              return ['./tsconfig.app.json', './tsconfig.node.json'];
+            }
+            return [];
+          })(),
         ],
         tsconfigRootDir: __dirname,
       },
@@ -85,7 +104,8 @@ export default [
       },
       'import/resolver': {
         typescript: {
-          alwaysTryTypes: true, // Ensures TypeScript types are always considered
+          alwaysTryTypes: true,
+          project: ['./tsconfig.json'],
         },
       },
     },
@@ -131,6 +151,7 @@ export default [
       'react/react-in-jsx-scope': 'off',
       '@typescript-eslint/no-unnecessary-boolean-literal-compare': ['error'],
 
+      'no-unused-vars': 'off', // Disable this base rule in favor of @typescript-eslint/no-unused-vars (recommended)
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
@@ -182,4 +203,5 @@ export default [
       ],
     },
   },
-];
+  ...nextConfigs,
+]);
