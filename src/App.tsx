@@ -8,8 +8,7 @@ function App() {
       import.meta.env.MODE === 'production'
         ? ''
         : String(import.meta.env.VITE_BACKEND_URL ?? '');
-    const apiUrl = `${baseUrl}/api`;
-    fetch(apiUrl)
+    fetch(`${baseUrl}/api`)
       .then((res) => res.json())
       .then((data: { message: string }) => {
         setMessage(data.message);
