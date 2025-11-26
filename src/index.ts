@@ -12,24 +12,20 @@ const platform: string = process.platform;
 
 const isVercel = process.env.VERCEL === '1';
 
-let projectRoot: string;
+let __dirname = '';
+let distDirectory = '';
 
-let __dirname = path.dirname(decodeURI(new URL(import.meta.url).pathname));
-if (isVercel) {
-  projectRoot = process.cwd();
-} else {
+if (!isVercel) {
   __dirname = path.dirname(decodeURI(new URL(import.meta.url).pathname));
   if (platform === 'win32') {
     __dirname = __dirname.substring(1);
   }
-  projectRoot = path.join(__dirname, '..');
+  distDirectory = path.join(__dirname, '..', 'dist');
+  app.use(express.static(distDirectory));
 }
-
-const distDirectory = path.join(projectRoot, 'dist');
 
 app.use(express.json());
 app.use(cors());
-app.use(express.static(distDirectory));
 
 app.get('/api', (_req: Request, res: Response) => {
   res.send({ message: 'Hello, world!' });
@@ -38,37 +34,43 @@ app.get('/api', (_req: Request, res: Response) => {
 import fs from 'node:fs';
 
 app.get('/api/files', (_req: Request, res: Response) => {
-  const currentPath = __dirname;
+  if (isVercel) {
+    res.send({ cwd: 'N/A on Vercel', files: [] });
+    return;
+  }
 
   let files: string[] = [];
 
   try {
-    files = fs.readdirSync(currentPath);
+    files = fs.readdirSync(__dirname);
   } catch (err) {
     const errorMessage = err instanceof Error ? err.message : String(err);
     files = [`Error reading directory: ${errorMessage}`];
   }
 
   res.send({
-    cwd: currentPath,
+    cwd: __dirname,
     files,
   });
 });
 
 app.get('/api/dist', (_req: Request, res: Response) => {
-  const distPath = path.join(__dirname, '..', 'dist');
+  if (isVercel) {
+    res.send({ distPath: 'N/A on Vercel', files: [], error: null });
+    return;
+  }
 
   let files: string[] = [];
   let error: string | null = null;
 
   try {
-    files = fs.readdirSync(distPath);
+    files = fs.readdirSync(distDirectory);
   } catch (err) {
     error = err instanceof Error ? err.message : String(err);
   }
 
   res.send({
-    distPath,
+    distPath: distDirectory,
     files,
     error,
   });
