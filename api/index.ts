@@ -1,3 +1,3 @@
-import index from '../src/index.ts';
+import app from '../src/index.ts';
 
-export default index;
+export default app;
