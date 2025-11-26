@@ -4,10 +4,10 @@ function App() {
   const [message, setMessage] = useState<string>('Loading...');
 
   useEffect(() => {
-    const baseUrl =
-      import.meta.env.MODE === 'production'
-        ? ''
-        : String(import.meta.env.VITE_BACKEND_URL ?? '');
+    const baseUrl: string =
+      import.meta.env.MODE !== 'production'
+        ? String(import.meta.env.VITE_BACKEND_URL ?? '')
+        : '';
     fetch(`${baseUrl}/api`)
       .then((res) => res.json())
       .then((data: { message: string }) => {
