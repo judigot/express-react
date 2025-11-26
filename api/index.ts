@@ -2,7 +2,7 @@ import express, { type Request, type Response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import process from 'node:process';
-import router from '@/route/index.ts';
+import router from './route/index.ts';
 
 dotenv.config();
 
