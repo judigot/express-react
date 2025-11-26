@@ -4,7 +4,9 @@ function App() {
   const [message, setMessage] = useState<string>('Loading...');
 
   useEffect(() => {
-    fetch(`${String(import.meta.env.VITE_BACKEND_URL)}/api`)
+    const backendUrl = String(import.meta.env.VITE_BACKEND_URL ?? '');
+    const apiUrl = backendUrl !== '' ? `${backendUrl}/api` : '/api';
+    fetch(apiUrl)
       .then((res) => res.json())
       .then((data: { message: string }) => {
         setMessage(data.message);
