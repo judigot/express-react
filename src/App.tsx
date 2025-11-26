@@ -27,7 +27,7 @@ function App() {
         setMessage(`${data.message} - React`);
       })
       .catch(() => {
-        setMessage('Backend unavailable');
+        setMessage('Backend unavailable. Make sure .env file is set correctly.');
       });
   }, []);
 
