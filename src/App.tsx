@@ -12,7 +12,16 @@ function App() {
     const backendUrl = backendHost ? `${backendHost}:${port}` : '';
     const baseUrl = backendUrl ? `${backendUrl}/${apiPath}` : `/${apiPath}`;
 
-    fetch(baseUrl)
+    fetch(baseUrl,
+      {
+        method: 'GET',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+          // Authorization: 'Basic ' + btoa('admin:123'),
+        },
+      },
+    )
       .then((res) => res.json())
       .then((data: { message: string }) => {
         setMessage(`${data.message} - React`);
