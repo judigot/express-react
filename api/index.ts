@@ -38,6 +38,10 @@ app.get('/', (_req: Request, res: Response) => {
   res.sendFile(publicDirectory);
 });
 
+app.get('/api', (_req: Request, res: Response) => {
+  res.send({ message: 'AlienStack' });
+});
+
 // Use routes from the routes folder
 app.use('/api', router);
 
