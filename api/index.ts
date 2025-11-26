@@ -2,7 +2,7 @@ import express, { type Request, type Response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import process from 'node:process';
-import router from '@/routes/index.ts';
+import router from '@/route/index.ts';
 
 dotenv.config();
 
@@ -14,11 +14,11 @@ app.use(express.json());
 app.use(cors());
 
 app.get('/api', (_req: Request, res: Response) => {
-  res.send({ message: 'AlienStack' });
+  res.send({ message: router() });
 });
 
 // Use routes from the routes folder
-app.use('/api', router);
+// app.use('/api', router);
 
 app.listen(VITE_BACKEND_PORT, () => {
   // eslint-disable-next-line no-console
