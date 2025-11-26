@@ -9,6 +9,15 @@ export default defineConfig({
   /* </newBuildOutput> */ /*<alias>*/ resolve: {
     alias: { '@': path.resolve(__dirname, './src') },
   },
-  /*</alias>*/ /*<devPort>*/ server: { host: true, port: 3000 },
+  /*</alias>*/ /*<devPort>*/ server: {
+    host: true,
+    port: 3000,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+      },
+    },
+  },
   plugins: [react(), tsconfigPaths()],
 });
